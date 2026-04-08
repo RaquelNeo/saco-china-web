@@ -14,10 +14,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sacochina.com">
 
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts: Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
@@ -60,9 +60,9 @@
 
       <ul class="nav__links" id="navLinks">
         <li><a href="#about"          class="nav__link">Who We Are</a></li>
-        <li><a href="#saco"           class="nav__link">Saco Textile</a></li>
-        <li><a href="#lowpact"        class="nav__link">Lowpact</a></li>
-        <li><a href="#products"       class="nav__link">Products</a></li>
+        <li><a href="manufacturing.html" class="nav__link">Manufacturing</a></li>
+        <li><a href="products.html"    class="nav__link">Products</a></li>
+        <li><a href="studio.html"     class="nav__link">Design Studio</a></li>
         <li><a href="#sustainability" class="nav__link">Sustainability</a></li>
         <li><a href="#contact"        class="nav__link nav__link--cta">Contact</a></li>
       </ul>
@@ -81,11 +81,7 @@
 
       <div class="hero__inner">
 <h1 class="hero__headline reveal reveal--delay-1">
-          Low-Impact<br>
-          Textile<br class="br-desktop">
-          Technologies<br>
-          &amp; Finished<br class="br-desktop">
-          Products
+          Low-Impact Textile Technologies<br>&amp; Finished Products
         </h1>
         <p class="hero__sub reveal reveal--delay-2">
           Saco Group is a vertically integrated textile platform combining
@@ -96,7 +92,7 @@
 
 
       <!-- Platform gateway cards -->
-      <div id="about" class="hero__cards reveal reveal--delay-4">
+      <div class="hero__cards reveal reveal--delay-4">
         <a href="#saco" class="hero__card hero__card--saco">
           <div class="hc__text">
             <span class="hc__name">Shanghai Saco Textile</span>
@@ -125,14 +121,14 @@
 
 
     <!-- ===== 01 — WHO WE ARE — #ffffff ===== -->
-    <section class="section s-about s-light">
+    <section class="section s-about s-light" id="about">
       <div class="container">
         <div class="about-grid">
 
           <!-- Left: text -->
           <div class="reveal">
             <div class="s-header">
-              <h2 class="s-title">Who<br>We Are</h2>
+              <h2 class="s-title">Who We Are</h2>
             </div>
             <p class="about-body">
               SACO Group connects low-impact material technology with scalable manufacturing platforms in China. With decades of experience in hosiery, seamless and next-to-skin categories, we support premium brands from yarn development to industrial production.
@@ -144,62 +140,38 @@
           </div>
 
           <!-- Right: SVG diagram -->
-          <div class="about-diagram reveal reveal--delay-1">
-            <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="group-svg" aria-label="Saco Group structure diagram">
-              <defs>
-                <path id="left-path"  d="M 250 60 C 250 140, 120 140, 120 218"/>
-                <path id="right-path" d="M 250 60 C 250 140, 380 140, 380 218"/>
-                <path id="h-path"     d="M 220 278 C 240 300, 260 300, 280 278"/>
-              </defs>
+          <div class="about-diagram" id="org-diagram">
+            <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" class="group-svg" aria-label="Saco Group structure diagram">
 
-              <!-- Curved branch left -->
-              <path d="M 250 60 C 250 140, 120 140, 120 218" stroke="#cccccc" stroke-width="1" fill="none"/>
-              <!-- Curved branch right -->
-              <path d="M 250 60 C 250 140, 380 140, 380 218" stroke="#cccccc" stroke-width="1" fill="none"/>
-              <!-- Connecting arc -->
-              <path d="M 220 278 C 240 300, 260 300, 280 278" stroke="#cccccc" stroke-width="1" fill="none"/>
+              <!-- SACO GROUP label -->
+              <text x="250" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="#2A2A2A" class="dia-el dia-step-1">SACO GROUP</text>
 
-              <!-- SACO GROUP -->
-              <text x="250" y="46"
-                    text-anchor="middle"
-                    font-family="Inter, sans-serif"
-                    font-size="22" font-weight="400"
-                    letter-spacing="3"
-                    fill="#1a1a1a">SACO GROUP</text>
+              <!-- Vertical line -->
+              <line x1="250" y1="45" x2="250" y2="100" stroke="#2A2A2A" stroke-opacity="0.12" stroke-width="1" class="dia-line dia-vline dia-step-2"/>
 
-              <!-- Shanghai Saco box — LEFT, green -->
-              <rect x="20"  y="218" width="200" height="85" rx="12" fill="#7EC8A0"/>
-              <text x="120" y="244" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#1a1a1a">SHANGHAI SACO</text>
-              <text x="120" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#1a1a1a">TEXTILE</text>
-              <text x="120" y="278" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="rgba(0,0,0,0.5)">Manufacturing &amp; development</text>
+              <!-- Junction dot -->
+              <circle cx="250" cy="100" r="3" fill="#E8E5DF" stroke="#2A2A2A" stroke-opacity="0.2" stroke-width="1" class="dia-el dia-step-3"/>
 
-              <!-- Lowpact box — RIGHT, blue -->
-              <rect x="280" y="218" width="200" height="85" rx="12" fill="#87CEEB"/>
-              <text x="380" y="244" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#1a1a1a">LOWPACT TEXTILE</text>
-              <text x="380" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#1a1a1a">TECHNOLOGY</text>
-              <text x="380" y="278" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="rgba(0,0,0,0.5)">Material innovation &amp; low-impact</text>
+              <!-- Horizontal line -->
+              <line x1="140" y1="100" x2="360" y2="100" stroke="#2A2A2A" stroke-opacity="0.12" stroke-width="1" class="dia-line dia-hline dia-step-3"/>
 
-              <!-- Dot: left curve -->
-              <circle r="4" fill="white" stroke="#aaaaaa" stroke-width="1.5">
-                <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.6 1">
-                  <mpath href="#left-path" xlink:href="#left-path"/>
-                </animateMotion>
-              </circle>
+              <!-- Left drop -->
+              <line x1="140" y1="100" x2="140" y2="140" stroke="#2A2A2A" stroke-opacity="0.12" stroke-width="1" class="dia-line dia-vline dia-step-4"/>
+              <!-- Right drop -->
+              <line x1="360" y1="100" x2="360" y2="140" stroke="#2A2A2A" stroke-opacity="0.12" stroke-width="1" class="dia-line dia-vline dia-step-4"/>
 
-              <!-- Dot: right curve -->
-              <circle r="4" fill="white" stroke="#aaaaaa" stroke-width="1.5">
-                <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.9s" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.6 1">
-                  <mpath href="#right-path" xlink:href="#right-path"/>
-                </animateMotion>
-              </circle>
+              <!-- Shanghai Saco — LEFT, green -->
+              <rect x="40" y="140" width="200" height="70" rx="10" fill="#7EC8A0" class="dia-el dia-step-5"/>
+              <text x="140" y="170" text-anchor="middle" font-family="Outfit, sans-serif" font-size="13" font-weight="600" letter-spacing="0.5" fill="#1a1a1a" class="dia-el dia-step-5">Shanghai Saco Textile</text>
+              <text x="140" y="190" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="300" fill="rgba(0,0,0,0.5)" class="dia-el dia-step-5">Manufacturing &amp; development</text>
 
-              <!-- Dot: arc connecting boxes (back and forth) -->
-              <circle r="4" fill="white" stroke="#aaaaaa" stroke-width="1.5">
-                <animateMotion dur="1.8s" repeatCount="indefinite" begin="1.8s"
-                               keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
-                  <mpath href="#h-path" xlink:href="#h-path"/>
-                </animateMotion>
-              </circle>
+              <!-- Lowpact — RIGHT, blue -->
+              <rect x="260" y="140" width="200" height="70" rx="10" fill="#87CEEB" class="dia-el dia-step-5"/>
+              <text x="360" y="170" text-anchor="middle" font-family="Outfit, sans-serif" font-size="13" font-weight="600" letter-spacing="0.5" fill="#1a1a1a" class="dia-el dia-step-5">Lowpact Textile Technology</text>
+              <text x="360" y="190" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="300" fill="rgba(0,0,0,0.5)" class="dia-el dia-step-5">Material innovation &amp; low-impact</text>
+
+              <!-- Pulse -->
+              <circle cx="250" cy="100" r="3" fill="none" stroke="#2A2A2A" stroke-opacity="0.1" stroke-width="1" class="dia-pulse dia-step-6"/>
             </svg>
           </div>
 
@@ -208,345 +180,60 @@
     </section>
 
 
-    <!-- ===== 02 — SHANGHAI SACO TEXTILE — #1a3a1a ===== -->
-    <section class="section s-saco s-dark" id="saco">
+    <!-- ===== 02 — SHANGHAI SACO TEXTILE ===== -->
+    <section class="section s-saco s-light" id="saco">
       <div class="container">
 
-        <div class="s-header s-header--with-link reveal">
-          <div class="s-header__left">
-            <h2 class="s-title">Shanghai<br>Saco Textile</h2>
+        <div class="platform-intro-grid reveal">
+          <div class="platform-intro">
+            <h2 class="s-title" style="margin-bottom: 0.5rem;">Shanghai Saco Textile Co. Ltd.</h2>
+            <p class="s-subtitle" style="margin-bottom: clamp(1.5rem, 3vw, 2.5rem);">Finished Products Platform</p>
+            <p>SACO is the manufacturing and product development platform of SACO Group, translating advanced materials and low-impact technologies into premium finished garments.</p>
+            <br>
+            <p>Building on decades of experience in hosiery, seamless and next-to-skin intimates, SACO combines industrial expertise, material know-how and responsible production to deliver consistent quality at scale.</p>
+            <br>
+            <p>Our role is to connect innovation with real-world application, supporting brands from product development and sampling to industrial production, with a strong focus on fit, comfort and long-term performance.</p>
           </div>
-          <a href="#products" class="editorial-link">Explore Products →</a>
+          <div class="platform-intro__img">
+            <img src="images/swimwear/imagen-lenceria.jpg?v=2" alt="Finished products — lingerie" loading="lazy">
+          </div>
         </div>
 
-        <p class="platform-intro reveal reveal--delay-1">
-          Shanghai Saco Textile is the product development and manufacturing platform of Saco Group, translating advanced low-impact materials into premium finished garments — from sampling and development to full industrial-scale production across hosiery, seamless, underwear, babywear and silk.
-        </p>
+        <h3 class="s-subtitle reveal reveal--delay-2">Why Saco</h3>
+        <div class="why-banner reveal reveal--delay-2">
+          <span class="why-banner__item">Product-focused development</span>
+          <span class="why-banner__item">Strong industrial base in Asia</span>
+          <span class="why-banner__item">Flexibility across categories and volumes</span>
+          <span class="why-banner__item">Experience with demanding international brands</span>
+        </div>
 
-        <div class="saco-stats reveal reveal--delay-2">
+        <div class="capabilities reveal">
+          <div class="capabilities__header">
+            <h3 class="capabilities__heading">Core Capabilities</h3>
+            <a href="products.html" class="capabilities__btn">Explore Products →</a>
+          </div>
+        </div>
+
+        <div class="saco-stats reveal">
           <div class="saco-stat">
             <span class="saco-stat__n">400</span>
             <span class="saco-stat__label">Knitting Machines</span>
             <span class="saco-stat__sub">→ 40M pairs socks / year</span>
           </div>
           <div class="saco-stat">
-            <span class="saco-stat__n">12</span>
-            <span class="saco-stat__label">Production Lines</span>
-            <span class="saco-stat__sub">→ 10M pieces intimates / year</span>
+            <span class="saco-stat__n">80</span>
+            <span class="saco-stat__label">Seamless Machines</span>
+            <span class="saco-stat__sub">→ 8M seamless garments / year</span>
           </div>
           <div class="saco-stat">
-            <span class="saco-stat__n">26K</span>
-            <span class="saco-stat__label">Square Metres — Anhui</span>
-            <span class="saco-stat__sub">→ 18,000 m² manufacturing</span>
+            <span class="saco-stat__n">12</span>
+            <span class="saco-stat__label">Production Lines</span>
+            <span class="saco-stat__sub">→ 10M pieces underwear &amp; swimwear / year</span>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ===== 03 — LOWPACT TEXTILE TECHNOLOGY — #2d5a2d ===== -->
-    <section class="section s-lowpact s-dark" id="lowpact">
-      <div class="container">
-
-        <div class="s-header s-header--with-link reveal">
-          <div class="s-header__left">
-            <h2 class="s-title">Lowpact<br>Textile<br>Technology</h2>
-          </div>
-          <a href="https://lowpact-textile.com" target="_blank" rel="noopener noreferrer" class="editorial-link">Visit Lowpact Textile Technology →</a>
-        </div>
-
-        <p class="platform-intro reveal reveal--delay-1">
-          The innovation engine of Saco Group. Lowpact Textile Technology develops low-impact yarn, dyeing and material technologies that underpin our sustainable credentials — and those of the premium brands we supply.
-        </p>
-
-        <div class="tech-cards reveal reveal--delay-2">
-          <div class="tech-card">
-            <h3 class="tech-card__name">IndiDye<sup>®</sup></h3>
-            <p class="tech-card__desc">High-performance natural plant dyes with low environmental impact. A closed-loop dyeing process that eliminates synthetic colorants without compromising colour fastness or vibrancy.</p>
-          </div>
-          <div class="tech-card">
-            <h3 class="tech-card__name">SoftSpin<sup>™</sup></h3>
-            <p class="tech-card__desc">Patented spinning technology delivering premium softness without chemical softeners. Produces yarns with exceptional hand-feel that maintain their properties through repeated washing.</p>
-          </div>
-          <div class="tech-card">
-            <h3 class="tech-card__name">Resilkose<sup>™</sup></h3>
-            <p class="tech-card__desc">GRS-certified recycled and organic silk for circular premium textiles. Maintains the luxurious qualities of silk while significantly reducing the environmental footprint of silk production.</p>
-          </div>
-        </div>
-
-        <div class="lowpact-certs reveal reveal--delay-3">
-          <p class="lowpact-certs__label">Certifications &amp; Standards</p>
-          <div class="lowpact-certs__list">
-            <span class="cert-badge">Roadmap to Zero</span>
-            <span class="cert-badge">Textile Exchange</span>
-            <span class="cert-badge">Oeko-Tex Eco Passport</span>
-            <span class="cert-badge">RWS</span>
-            <span class="cert-badge">Global Recycled Standard</span>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-
-
-    <!-- ===== 04 — PRODUCTS — #0a0a0a ===== -->
-    <section class="section s-products s-dark">
-      <div class="container">
-
-        <div class="s-header reveal" id="products">
-          <h2 class="s-title">Products</h2>
-        </div>
-
-        <!-- Tabs -->
-        <div class="product-tabs reveal">
-          <button class="product-tab product-tab--active" data-target="socks">Socks &amp; Hosiery</button>
-          <button class="product-tab" data-target="seamless">Seamless</button>
-          <button class="product-tab" data-target="underwear">Underwear &amp; Swimwear</button>
-          <button class="product-tab" data-target="baby">Babywear &amp; Kids</button>
-          <button class="product-tab" data-target="silk">Silk Garments</button>
-        </div>
-
-        <!-- SOCKS & HOSIERY -->
-        <div class="product-panel product-panel--active" id="panel-socks">
-          <div class="product-layout">
-            <div class="product-carousel-wrap">
-              <div class="carousel" id="carousel-socks">
-                <div class="carousel__track">
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=900&q=80&fit=crop&crop=center" alt="Socks textile" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=900&q=80&fit=crop&crop=center" alt="Hosiery fashion" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&fit=crop&crop=center" alt="Textile fabric" loading="lazy">
-                  </div>
-                </div>
-                <div class="carousel__controls">
-                  <button class="carousel__btn carousel__btn--prev" aria-label="Previous">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <div class="carousel__dots"></div>
-                  <button class="carousel__btn carousel__btn--next" aria-label="Next">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-category-title">Socks &amp; Hosiery</h3>
-              <p class="product-category-desc">Industrial socks and hosiery programs with controlled fit and stable production standards. From everyday fashion to trekking and high-performance sports.</p>
-              <div class="product-materials">
-                <h4 class="product-materials__title">Materials &amp; Compositions</h4>
-                <ul class="materials-list">
-                  <li>Organic cotton</li>
-                  <li>SoftSpin<sup>™</sup> cotton</li>
-                  <li>Recycled nylon</li>
-                  <li>Merino wool</li>
-                  <li>Recycled acrylic</li>
-                  <li>Plant-dyed with IndiDye<sup>®</sup></li>
-                  <li>Polylana<sup>®</sup></li>
-                  <li>Eco viscose</li>
-                </ul>
-              </div>
-              <div class="product-capacity">
-                <span class="capacity-figure">40M</span>
-                <span class="capacity-unit">pairs / year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SEAMLESS -->
-        <div class="product-panel" id="panel-seamless">
-          <div class="product-layout">
-            <div class="product-carousel-wrap">
-              <div class="carousel" id="carousel-seamless">
-                <div class="carousel__track">
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80&fit=crop&crop=center" alt="Seamless activewear" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1571019613914-85f342c6a11e?w=900&q=80&fit=crop&crop=center" alt="Seamless garment" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80&fit=crop&crop=center" alt="Activewear fabric" loading="lazy">
-                  </div>
-                </div>
-                <div class="carousel__controls">
-                  <button class="carousel__btn carousel__btn--prev" aria-label="Previous">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <div class="carousel__dots"></div>
-                  <button class="carousel__btn carousel__btn--next" aria-label="Next">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-category-title">Seamless</h3>
-              <p class="product-category-desc">Seamless garments engineered for scalable production, comfort and technical precision. Innerwear and outerwear applications across activewear, base layers and underwear.</p>
-              <div class="product-materials">
-                <h4 class="product-materials__title">Materials &amp; Compositions</h4>
-                <ul class="materials-list">
-                  <li>Recycled polyamide</li>
-                  <li>Organic cotton</li>
-                  <li>Recycled polyester</li>
-                  <li>Silk</li>
-                  <li>Wool</li>
-                  <li>SoftSpin<sup>™</sup> cotton</li>
-                </ul>
-              </div>
-              <div class="product-capacity">
-                <span class="capacity-figure">Men &amp; Women</span>
-                <span class="capacity-unit">programs available</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNDERWEAR & SWIMWEAR -->
-        <div class="product-panel" id="panel-underwear">
-          <div class="product-layout">
-            <div class="product-carousel-wrap">
-              <div class="carousel" id="carousel-underwear">
-                <div class="carousel__track">
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=900&q=80&fit=crop&crop=center" alt="Underwear minimal" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1594938298603-a3d2b6e96e38?w=900&q=80&fit=crop&crop=center" alt="Intimates fashion" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1490481651865-b01ad3b2b3d0?w=900&q=80&fit=crop&crop=center" alt="Swimwear minimal" loading="lazy">
-                  </div>
-                </div>
-                <div class="carousel__controls">
-                  <button class="carousel__btn carousel__btn--prev" aria-label="Previous">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <div class="carousel__dots"></div>
-                  <button class="carousel__btn carousel__btn--next" aria-label="Next">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-category-title">Underwear &amp; Swimwear</h3>
-              <p class="product-category-desc">Next-to-skin and swimwear programs developed for brands seeking reliable production and controlled performance. From sampling to industrial scale.</p>
-              <div class="product-materials">
-                <h4 class="product-materials__title">Materials &amp; Compositions</h4>
-                <ul class="materials-list">
-                  <li>Organic cotton</li>
-                  <li>Recycled nylon</li>
-                  <li>Eco viscose</li>
-                  <li>Veglon<sup>®</sup> bio based</li>
-                  <li>RWS Responsible Wool</li>
-                </ul>
-              </div>
-              <div class="product-capacity">
-                <span class="capacity-figure">10M</span>
-                <span class="capacity-unit">pieces / year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BABYWEAR & KIDS -->
-        <div class="product-panel" id="panel-baby">
-          <div class="product-layout">
-            <div class="product-carousel-wrap">
-              <div class="carousel" id="carousel-baby">
-                <div class="carousel__track">
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1522771739844-12a253846232?w=900&q=80&fit=crop&crop=center" alt="Baby knitwear" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=900&q=80&fit=crop&crop=center" alt="Babywear organic cotton" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=80&fit=crop&crop=center" alt="Kids knitwear" loading="lazy">
-                  </div>
-                </div>
-                <div class="carousel__controls">
-                  <button class="carousel__btn carousel__btn--prev" aria-label="Previous">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <div class="carousel__dots"></div>
-                  <button class="carousel__btn carousel__btn--next" aria-label="Next">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-category-title">Babywear &amp; Kids</h3>
-              <p class="product-category-desc">Babywear combining sewn garments and fully fashioned knitwear. Soft, safe materials for infant and kids programs in organic and sustainable fibres.</p>
-              <div class="product-materials">
-                <h4 class="product-materials__title">Materials &amp; Compositions</h4>
-                <ul class="materials-list">
-                  <li>Organic cotton</li>
-                  <li>CMIA Cotton Made in Africa</li>
-                  <li>Recycled cotton</li>
-                  <li>SoftSpin<sup>™</sup> cotton</li>
-                  <li>RWS wool</li>
-                </ul>
-              </div>
-              <div class="product-capacity">
-                <span class="capacity-figure">3M</span>
-                <span class="capacity-unit">pieces / year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SILK GARMENTS -->
-        <div class="product-panel" id="panel-silk">
-          <div class="product-layout">
-            <div class="product-carousel-wrap">
-              <div class="carousel" id="carousel-silk">
-                <div class="carousel__track">
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=80&fit=crop&crop=center" alt="Silk garment" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1445108771540-42c2a27aedb5?w=900&q=80&fit=crop&crop=center" alt="Silk fabric texture" loading="lazy">
-                  </div>
-                  <div class="carousel__slide">
-                    <img src="https://images.unsplash.com/photo-1596205545553-c04e2ac6e6bd?w=900&q=80&fit=crop&crop=center" alt="Silk premium" loading="lazy">
-                  </div>
-                </div>
-                <div class="carousel__controls">
-                  <button class="carousel__btn carousel__btn--prev" aria-label="Previous">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                  <div class="carousel__dots"></div>
-                  <button class="carousel__btn carousel__btn--next" aria-label="Next">
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-category-title">Silk Garments</h3>
-              <p class="product-category-desc">Silk garment developments focused on material performance, durability and production consistency. Conventional, recycled and organic silk options for garments and home textiles.</p>
-              <div class="product-materials">
-                <h4 class="product-materials__title">Materials &amp; Compositions</h4>
-                <ul class="materials-list">
-                  <li>Conventional silk</li>
-                  <li>Resilkose<sup>™</sup> recycled silk</li>
-                  <li>Organic silk (GRS certified)</li>
-                </ul>
-              </div>
-              <div class="product-capacity">
-                <span class="capacity-figure">Garments</span>
-                <span class="capacity-unit">&amp; home textiles</span>
-              </div>
-            </div>
+          <div class="saco-stat">
+            <span class="saco-stat__n">50</span>
+            <span class="saco-stat__label">Flat Knit Machines</span>
+            <span class="saco-stat__sub">→ 3M baby knitwear pieces / year</span>
           </div>
         </div>
 
@@ -565,7 +252,7 @@
         <div class="sustain-grid">
           <div class="reveal reveal--delay-1">
             <p class="sustain-lead">
-              Embedded in<br>technology,<br>not added as<br>a final layer
+              Embedded in technology, not added as a final layer
             </p>
             <p class="sustain-body">
               Our approach focuses on reducing chemicals, water use and waste at the source, prioritising physical and mechanical solutions over chemical finishes. From IndiDye<sup>®</sup> plant-based dyeing to SoftSpin<sup>™</sup> chemical-free softening and Resilkose<sup>™</sup> circular silk — sustainability is built into the material itself.
@@ -595,27 +282,27 @@
           <p class="certs-block__label">Certifications</p>
           <div class="certs-grid">
             <div class="cert-item">
-              <div class="cert-item__abbr">GOTS</div>
+              <img src="images/logos/gots-vector-logo.png" alt="GOTS" class="cert-item__logo">
               <div class="cert-item__name">Global Organic Textile Standard</div>
             </div>
             <div class="cert-item">
-              <div class="cert-item__abbr">RWS</div>
+              <img src="images/logos/responsible-wool-standard-rws-logo-vector.png" alt="RWS" class="cert-item__logo">
               <div class="cert-item__name">Responsible Wool Standard</div>
             </div>
             <div class="cert-item">
-              <div class="cert-item__abbr">GRS</div>
+              <img src="images/logos/GRS-logo copia.png" alt="GRS" class="cert-item__logo">
               <div class="cert-item__name">Global Recycled Standard</div>
             </div>
             <div class="cert-item">
-              <div class="cert-item__abbr">OT 100</div>
-              <div class="cert-item__name">Oeko-Tex Standard 100</div>
+              <img src="images/logos/OEKO-TEX_ECO passport_Logo_rgb.png" alt="Oeko-Tex" class="cert-item__logo">
+              <div class="cert-item__name">Oeko-Tex Eco Passport</div>
             </div>
             <div class="cert-item">
-              <div class="cert-item__abbr">R2Z</div>
+              <img src="images/logos/roadmap-to-zero-logo-vector.svg" alt="Roadmap to Zero" class="cert-item__logo">
               <div class="cert-item__name">Roadmap to Zero</div>
             </div>
             <div class="cert-item">
-              <div class="cert-item__abbr">BSCI</div>
+              <img src="images/logos/BSCI.png" alt="BSCI" class="cert-item__logo">
               <div class="cert-item__name">Business Social Compliance</div>
             </div>
           </div>
@@ -625,38 +312,6 @@
     </section>
 
 
-    <!-- ===== 06 — ANHUI FACTORY — #1a1a1a + photo ===== -->
-    <section class="s-factory s-dark" id="factory">
-      <div class="factory-image-wrap">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80&fit=crop&crop=center" alt="Saco Anhui textile factory" class="factory-image" loading="lazy">
-        <div class="factory-overlay" aria-hidden="true"></div>
-      </div>
-      <div class="container factory-content">
-        <div class="factory-header reveal">
-          <h2 class="s-title s-title--light">Anhui<br>Factory</h2>
-          <p class="factory-desc">
-            Our production facility in Anhui, China covers <strong>26,000 square metres</strong>, including 18,000 m² dedicated to manufacturing. Integrated production lines for socks, intimates and babywear under one roof.
-          </p>
-        </div>
-        <div class="factory-stats">
-          <div class="factory-stat reveal reveal--delay-1">
-            <span class="factory-stat__number">400</span>
-            <span class="factory-stat__unit">Knitting machines</span>
-            <span class="factory-stat__output">→ 40M pairs socks / year</span>
-          </div>
-          <div class="factory-stat reveal reveal--delay-2">
-            <span class="factory-stat__number">12</span>
-            <span class="factory-stat__unit">Production lines</span>
-            <span class="factory-stat__output">→ 10M pieces intimates / year</span>
-          </div>
-          <div class="factory-stat reveal reveal--delay-3">
-            <span class="factory-stat__number">50</span>
-            <span class="factory-stat__unit">Flat knitting machines</span>
-            <span class="factory-stat__output">→ 3M pieces babywear / year</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <!-- ===== 07 — CLIENTS & MARKETS — #ffffff ===== -->
@@ -664,32 +319,36 @@
       <div class="container">
 
         <div class="s-header reveal">
-          <h2 class="s-title">Clients &amp;<br>Markets</h2>
+          <h2 class="s-title">Clients &amp; Markets</h2>
         </div>
 
-        <p class="clients-intro reveal reveal--delay-1">
-          We collaborate with premium European brands and international retailers across hosiery, seamless, lingerie and next-to-skin categories.
-        </p>
+        <div class="clients-intro reveal reveal--delay-1">
+          <p>We partner with fashion brands and international retailers across global markets, supporting both structured production programs and ongoing product development.</p>
+          <br>
+          <p>Our clients operate across Europe, North America, South America and Australia, reflecting our ability to work across different market requirements, price levels and product strategies.</p>
+          <br>
+          <p>The brands shown here represent a selection of ongoing collaborations.</p>
+        </div>
 
         <div class="clients-grid reveal reveal--delay-2">
           <div class="client-logo-item">
-            <span class="client-logo-name">Zara</span>
+            <img src="images/logos/Zara_(retailer)-Logo.wine.svg" alt="Zara" class="client-logo-img" style="max-height: 68px;">
             <span class="client-logo-group">Inditex Group</span>
           </div>
           <div class="client-logo-item">
-            <span class="client-logo-name">Oysho</span>
+            <img src="images/logos/oysho-logo.png" alt="Oysho" class="client-logo-img" style="max-height: 28px;">
             <span class="client-logo-group">Inditex Group</span>
           </div>
           <div class="client-logo-item">
-            <span class="client-logo-name">Women's Secret</span>
+            <img src="images/logos/women-secret-logo.png" alt="Women's Secret" class="client-logo-img">
             <span class="client-logo-group">Tendam Group</span>
           </div>
           <div class="client-logo-item">
-            <span class="client-logo-name">Springfield</span>
+            <img src="images/logos/springfield-logo.png" alt="Springfield" class="client-logo-img">
             <span class="client-logo-group">Tendam Group</span>
           </div>
           <div class="client-logo-item">
-            <span class="client-logo-name">Kappahl</span>
+            <img src="images/logos/Kappahl-Logo.png" alt="Kappahl" class="client-logo-img" style="max-height: 48px;">
             <span class="client-logo-group">Kappahl Group</span>
           </div>
         </div>
@@ -698,59 +357,158 @@
     </section>
 
 
-    <!-- ===== 08 — CONTACT — #0a0a0a ===== -->
-    <section class="section s-contact s-dark" id="contact">
+    <!-- ===== LOWPACT TEXTILE TECHNOLOGY ===== -->
+    <section class="section s-lowpact s-dark" id="lowpact">
       <div class="container">
 
-        <div class="s-header reveal">
-          <h2 class="s-title">Get In<br>Touch</h2>
+        <div class="s-header s-header--with-link reveal">
+          <div class="s-header__left">
+            <h2 class="s-title">Lowpact Textile Technology, Ltd.</h2>
+          </div>
+          <a href="https://lowpact-textile.com" target="_blank" rel="noopener noreferrer" class="editorial-link">Visit Lowpact Textile Technology →</a>
         </div>
 
-        <p class="contact-intro reveal reveal--delay-1">
-          Sourcing managers and buyers — we welcome enquiries for sampling, development and production programmes.
+        <p class="platform-intro reveal reveal--delay-1">
+          The innovation engine of Saco Group. Lowpact Textile Technology develops low-impact yarn, dyeing and material technologies that underpin our sustainable credentials — and those of the premium brands we supply.
         </p>
 
-        <div class="contact-grid reveal reveal--delay-2">
-          <div class="contact-card">
-            <div class="contact-card__platform">Manufacturing Platform</div>
-            <h3 class="contact-card__name">Shanghai Saco Textile Co. Ltd.</h3>
-            <address class="contact-card__address">
-              Room 501-2 &amp; 3, Building 8<br>
-              No.1509 Xinzhen Road, Minhang District<br>
-              201101, Shanghai, China
-            </address>
-            <div class="contact-card__details">
-              <a href="tel:+862133532535" class="contact-link">
-                <span class="contact-link__label">Tel</span>
-                <span class="contact-link__value">0086-21-33532535</span>
-              </a>
-              <a href="mailto:info@sacochina.com" class="contact-link">
-                <span class="contact-link__label">Email</span>
-                <span class="contact-link__value">info@sacochina.com</span>
-              </a>
-            </div>
+        <div class="tech-cards reveal reveal--delay-2">
+          <div class="tech-card">
+            <h3 class="tech-card__name">IndiDye<sup>®</sup></h3>
+            <p class="tech-card__desc">High-performance natural plant dyes with low environmental impact. A closed-loop dyeing process that eliminates synthetic colorants without compromising colour fastness or vibrancy.</p>
           </div>
-          <div class="contact-card">
-            <div class="contact-card__platform">Innovation Platform</div>
-            <h3 class="contact-card__name">Lowpact Textile Technology Co. Ltd.</h3>
-            <address class="contact-card__address">
-              Shanghai, China
-            </address>
-            <div class="contact-card__details">
-              <a href="https://lowpact-textile.com" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <span class="contact-link__label">Web</span>
-                <span class="contact-link__value">lowpact-textile.com ↗</span>
-              </a>
-              <a href="mailto:info@lowpact-textile.com" class="contact-link">
-                <span class="contact-link__label">Email</span>
-                <span class="contact-link__value">info@lowpact-textile.com</span>
-              </a>
-            </div>
+          <div class="tech-card">
+            <h3 class="tech-card__name">SoftSpin<sup>™</sup></h3>
+            <p class="tech-card__desc">Patented spinning technology delivering premium softness without chemical softeners. Produces yarns with exceptional hand-feel that maintain their properties through repeated washing.</p>
+          </div>
+          <div class="tech-card">
+            <h3 class="tech-card__name">Resilkose<sup>™</sup></h3>
+            <p class="tech-card__desc">GRS-certified recycled and organic silk for circular premium textiles. Maintains the luxurious qualities of silk while significantly reducing the environmental footprint of silk production.</p>
+          </div>
+        </div>
+
+        <div class="lowpact-certs reveal reveal--delay-3">
+          <p class="lowpact-certs__label">Certifications &amp; Standards</p>
+          <div class="lowpact-certs__logos">
+            <img src="images/logos/roadmap-to-zero-logo-vector.svg" alt="Roadmap to Zero" class="lowpact-cert-logo">
+            <img src="images/logos/textile-exchange-logo.png" alt="Textile Exchange" class="lowpact-cert-logo">
+            <img src="images/logos/OEKO-TEX_ECO passport_Logo_rgb.png" alt="Oeko-Tex Eco Passport" class="lowpact-cert-logo">
+            <img src="images/logos/responsible-wool-standard-rws-logo-vector.png" alt="RWS" class="lowpact-cert-logo">
+            <img src="images/logos/GRS-logo copia.png" alt="Global Recycled Standard" class="lowpact-cert-logo">
           </div>
         </div>
 
       </div>
     </section>
+
+
+    <!-- ===== 08 — CONTACT ===== -->
+    <section class="section s-contact s-light" id="contact">
+      <div class="container">
+
+        <div class="s-header reveal">
+          <h2 class="s-title">Get In Touch</h2>
+        </div>
+
+        <div class="contact-layout reveal reveal--delay-1">
+          <!-- Left: info cards -->
+          <div class="contact-cards-stack">
+            <div class="contact-card">
+              <div class="contact-card__platform">Manufacturing Platform</div>
+              <h3 class="contact-card__name">Shanghai Saco Textile Co. Ltd.</h3>
+              <address class="contact-card__address">
+                Room 501-2 &amp; 3, Building 8<br>
+                No.1509 Xinzhen Road, Minhang District<br>
+                201101, Shanghai, China
+              </address>
+              <div class="contact-card__details">
+                <a href="tel:+862133532535" class="contact-link">
+                  <span class="contact-link__label">Tel</span>
+                  <span class="contact-link__value">0086-21-33532535</span>
+                </a>
+                <a href="mailto:info@sacochina.com" class="contact-link">
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">info@sacochina.com</span>
+                </a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__platform">Innovation Platform</div>
+              <h3 class="contact-card__name">Lowpact Textile Technology Co. Ltd.</h3>
+              <address class="contact-card__address">
+                Shanghai, China
+              </address>
+              <div class="contact-card__details">
+                <a href="https://lowpact-textile.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  <span class="contact-link__label">Web</span>
+                  <span class="contact-link__value">lowpact-textile.com ↗</span>
+                </a>
+                <a href="mailto:info@lowpact-textile.com" class="contact-link">
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">info@lowpact-textile.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: contact form -->
+          <form id="contact-form" action="https://formspree.io/f/maqlakqp" method="POST" style="padding: 24px; background: white; border-radius: 10px; border: 1px solid var(--c-border); display: flex; flex-direction: column; height: 100%;">
+            <input type="hidden" name="_subject" value="New inquiry from sacochina.com">
+            <input type="hidden" name="_template" value="table">
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-weight: 600; color: var(--c-text); margin-bottom: 8px; font-size: 14px;">Name</label>
+              <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--c-border); border-radius: 6px; font-family: var(--font-body); font-size: 14px;" placeholder="Your name">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-weight: 600; color: var(--c-text); margin-bottom: 8px; font-size: 14px;">Email</label>
+              <input type="email" name="_replyto" required style="width: 100%; padding: 12px; border: 1px solid var(--c-border); border-radius: 6px; font-family: var(--font-body); font-size: 14px;" placeholder="your@email.com">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-weight: 600; color: var(--c-text); margin-bottom: 8px; font-size: 14px;">Company (optional)</label>
+              <input type="text" name="company" style="width: 100%; padding: 12px; border: 1px solid var(--c-border); border-radius: 6px; font-family: var(--font-body); font-size: 14px;" placeholder="Your company">
+            </div>
+            <div style="margin-bottom: 20px; flex: 1; display: flex; flex-direction: column;">
+              <label style="display: block; font-weight: 600; color: var(--c-text); margin-bottom: 8px; font-size: 14px;">Message</label>
+              <textarea name="message" required style="width: 100%; padding: 12px; border: 1px solid var(--c-border); border-radius: 6px; font-family: var(--font-body); font-size: 14px; resize: vertical; flex: 1; min-height: 120px;" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" id="form-btn" style="width: 100%; padding: 12px; background: var(--c-text); color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.3s;">Send Message</button>
+            <div id="form-success" style="display: none;"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+    var form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('form-btn');
+      var nameVal = form.querySelector('[name="name"]').value;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(function(r) {
+          if (r.ok) {
+            btn.style.display = 'none';
+            var summary = document.getElementById('form-success');
+            summary.style.display = 'block';
+            summary.innerHTML = '<div style="text-align:center;padding:24px 0 16px;">'
+              + '<p style="font-size:18px;font-weight:600;color:var(--c-text);margin-bottom:8px;">Message sent</p>'
+              + '<p style="font-size:14px;color:var(--c-text-sec);margin-bottom:24px;">Thank you, ' + nameVal + '. We will get back to you shortly.</p>'
+              + '</div>';
+            form.reset();
+          } else {
+            btn.textContent = 'Error. Try again.';
+            btn.disabled = false;
+          }
+        })
+        .catch(function() {
+          btn.textContent = 'Error. Try again.';
+          btn.disabled = false;
+        });
+    });
+    </script>
 
   </main>
 
@@ -761,11 +519,11 @@
       <div class="footer__logo">SACO GROUP</div>
       <nav class="footer__nav" aria-label="Footer navigation">
         <a href="#about">Who We Are</a>
-        <a href="#saco">Saco Textile</a>
-        <a href="#lowpact">Lowpact</a>
-        <a href="#products">Products</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="products.html">Products</a>
+        <a href="studio.html">Design Studio</a>
         <a href="#sustainability">Sustainability</a>
-        <a href="#factory">Factory</a>
+
         <a href="#clients">Clients</a>
         <a href="#contact">Contact</a>
         <a href="https://lowpact-textile.com" target="_blank" rel="noopener noreferrer">Lowpact ↗</a>
@@ -782,12 +540,11 @@
     <div class="menu-overlay__inner">
       <nav class="menu-overlay__nav" aria-label="Main navigation">
         <a href="#about"          class="menu-overlay__link" data-num="01">Who We Are</a>
-        <a href="#saco"           class="menu-overlay__link" data-num="02">Shanghai Saco Textile</a>
-        <a href="#lowpact"        class="menu-overlay__link" data-num="03">Lowpact Technology</a>
-        <a href="#products"       class="menu-overlay__link" data-num="04">Products</a>
+        <a href="manufacturing.html" class="menu-overlay__link" data-num="02">Manufacturing</a>
+        <a href="products.html"    class="menu-overlay__link" data-num="03">Products</a>
+        <a href="studio.html"     class="menu-overlay__link" data-num="04">Design Studio</a>
         <a href="#sustainability" class="menu-overlay__link" data-num="05">Sustainability</a>
-        <a href="#factory"        class="menu-overlay__link" data-num="06">Anhui Factory</a>
-        <a href="#clients"        class="menu-overlay__link" data-num="07">Clients &amp; Markets</a>
+        <a href="#clients"        class="menu-overlay__link" data-num="06">Clients &amp; Markets</a>
       </nav>
       <div class="menu-overlay__footer">
         <a href="#contact" class="menu-overlay__cta">

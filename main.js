@@ -290,3 +290,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => observer.observe(section));
 })();
+
+/* ============================================================
+   ORG DIAGRAM — trigger animation on scroll
+   ============================================================ */
+(function initDiagram() {
+  const diagram = document.getElementById('org-diagram');
+  if (!diagram) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        diagram.classList.add('is-animating');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(diagram);
+})();
