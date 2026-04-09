@@ -1185,13 +1185,14 @@ sup { font-size: 0.6em; vertical-align: super; }
   gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 .lowpact-cert-logo {
-  max-height: 40px;
-  max-width: 120px;
+  max-height: 55px;
+  max-width: 160px;
   object-fit: contain;
-  opacity: 0.6;
+  filter: brightness(0);
+  opacity: 0.5;
   transition: opacity var(--fast);
 }
-.lowpact-cert-logo:hover { opacity: 1; }
+.lowpact-cert-logo:hover { opacity: 0.8; }
 .cert-badge {
   font-family: var(--font-body);
   font-size: 13px;
