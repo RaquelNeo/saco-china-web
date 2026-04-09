@@ -594,7 +594,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: rgba(255,255,255,0.08);
-  margin-bottom: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 0;
 }
 .saco-stat {
   background: rgba(0,0,0,0.18);
@@ -1012,7 +1012,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 
 /* Capabilities */
 .capabilities {
-  margin-top: clamp(3rem, 6vw, 5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 .capabilities__header {
   display: flex;
