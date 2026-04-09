@@ -1185,15 +1185,15 @@ sup { font-size: 0.6em; vertical-align: super; }
   gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 .lowpact-cert-logo {
-  max-height: 50px;
-  max-width: 140px;
+  max-height: 90px;
+  max-width: 250px;
   object-fit: contain;
   background: rgba(255,255,255,0.85);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  transition: background var(--fast);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  transition: background var(--fast), transform var(--base);
 }
-.lowpact-cert-logo:hover { background: rgba(255,255,255,1); }
+.lowpact-cert-logo:hover { background: rgba(255,255,255,1); transform: translateY(-2px); }
 .cert-badge {
   font-family: var(--font-body);
   font-size: 13px;
