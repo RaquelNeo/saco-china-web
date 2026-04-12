@@ -1521,7 +1521,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 
 .product-layout {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 900px 1fr;
   gap: 1.5rem;
   align-items: stretch;
 }
