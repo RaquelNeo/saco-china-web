@@ -1491,7 +1491,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .product-tab {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
