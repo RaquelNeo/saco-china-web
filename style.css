@@ -1482,7 +1482,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 1rem;
   border-bottom: 1px solid var(--c-border);
 }
 .product-tab {
@@ -1518,7 +1518,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 .product-layout {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: clamp(2.5rem, 5vw, 5rem);
+  gap: 1.5rem;
   align-items: start;
 }
 
@@ -1531,7 +1531,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .carousel__slide {
   min-width: 100%;
-  height: calc(100vh - 320px);
+  height: 38vh;
   overflow: hidden;
   background: #ffffff;
 }
@@ -1576,41 +1576,41 @@ sup { font-size: 0.6em; vertical-align: super; }
 
 .product-category-title {
   font-family: var(--font-display);
-  font-size: var(--t-title);
+  font-size: 20px;
   font-weight: 600;
   text-transform: none;
   letter-spacing: -0.01em;
   line-height: 1.2;
   color: var(--c-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .product-category-desc {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--c-text-sec);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .product-materials__title {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--c-text-mut);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.materials-list { display: flex; flex-direction: column; margin-bottom: 2.5rem; }
+.materials-list { display: flex; flex-direction: column; margin-bottom: 1rem; }
 .materials-list li {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--c-text-sec);
-  padding: 0.65rem 0;
+  padding: 0.35rem 0;
   border-bottom: 1px solid var(--c-border);
-  display: flex; align-items: center; gap: 0.75rem;
+  display: flex; align-items: center; gap: 0.5rem;
 }
 .materials-list li::before {
   content: '';
@@ -1619,15 +1619,15 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 
 .product-capacity {
-  display: flex; align-items: baseline; gap: 0.75rem;
-  padding: 1.25rem 1.75rem;
+  display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
   background: var(--c-stone);
   border: 1px solid var(--c-border);
   border-radius: 10px;
 }
 .capacity-figure {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 600;
   text-transform: none;
   letter-spacing: -0.01em;
