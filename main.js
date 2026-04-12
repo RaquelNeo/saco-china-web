@@ -309,3 +309,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(diagram);
 })();
+
+/* ============================================================
+   MATERIAL CARDS — staggered reveal on scroll
+   ============================================================ */
+(function initMatCards() {
+  const grid = document.getElementById('mat-grid');
+  if (!grid) return;
+
+  const cards = grid.querySelectorAll('.mat-card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cards.forEach((card, i) => {
+          setTimeout(() => card.classList.add('is-visible'), i * 80);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(grid);
+})();
