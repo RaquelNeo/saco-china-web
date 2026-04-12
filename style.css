@@ -1482,12 +1482,12 @@ sup { font-size: 0.6em; vertical-align: super; }
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--c-border);
 }
 .product-tab {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
