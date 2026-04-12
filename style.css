@@ -1526,7 +1526,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   align-items: stretch;
 }
 .product-carousel-wrap {
-  max-width: 900px;
+  max-width: 500px;
 }
 .product-info {
   display: flex;
