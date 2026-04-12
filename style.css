@@ -12,7 +12,7 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
   color: var(--c-text);
@@ -509,7 +509,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 
 .about-body {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -759,7 +759,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   color: var(--c-text-mut);
 }
 .mfg-intro__text {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -850,7 +850,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   color: var(--c-border);
 }
 .mfg-block__desc {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -910,7 +910,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   margin-bottom: 1rem;
 }
 .silk-about__text {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -957,7 +957,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .silk-position p {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--c-text);
   line-height: 1.7;
   font-style: italic;
@@ -1000,7 +1000,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   aspect-ratio: 16/10;
 }
 .factory-inline__text p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -1093,7 +1093,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .why-banner__item {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--c-text);
   line-height: 1.5;
   background: var(--c-stone);
@@ -1157,7 +1157,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   margin-bottom: 1rem;
 }
 .tech-card__desc {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: rgba(255,255,255,0.5);
   line-height: 1.7;
@@ -1728,7 +1728,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   margin-bottom: 1.25rem;
 }
 .studio-body {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -1802,7 +1802,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   margin-bottom: 1rem;
 }
 .studio-model__desc {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -1956,7 +1956,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   margin-bottom: 1.25rem;
 }
 .sustain-body {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: var(--c-text-sec);
   line-height: 1.7;
@@ -2250,7 +2250,7 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 
 .contact-intro {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: rgba(0,0,0,0.5);
   line-height: 1.7;
