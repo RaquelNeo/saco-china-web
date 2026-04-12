@@ -2014,12 +2014,16 @@ sup { font-size: 0.6em; vertical-align: super; }
   font-weight: 400;
   color: var(--c-text);
 }
-.mat-card--highlight {
-  background: var(--c-text);
+.mat-card--highlight,
+.mat-card--dark {
+  background: var(--c-text-sec);
 }
-.mat-card--highlight .mat-card__icon { color: var(--c-gold); }
-.mat-card--highlight .mat-card__name { color: #ffffff; }
-.mat-card--highlight:hover { background: var(--c-text-sec); }
+.mat-card--highlight .mat-card__icon,
+.mat-card--dark .mat-card__icon { color: var(--c-gold); }
+.mat-card--highlight .mat-card__name,
+.mat-card--dark .mat-card__name { color: #ffffff; }
+.mat-card--highlight:hover,
+.mat-card--dark:hover { background: var(--c-text-mut); }
 
 @media (max-width: 900px) {
   .mat-grid { grid-template-columns: repeat(3, 1fr); }
