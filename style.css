@@ -226,11 +226,11 @@ sup { font-size: 0.6em; vertical-align: super; }
 
 .nav__logo {
   font-family: var(--font-body);
-  font-size: calc(var(--t-sm) * 1.7);
+  font-size: calc(var(--t-sm) * 2.2);
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--c-text);
+  color: var(--c-text) !important;
   display: flex;
   align-items: baseline;
   gap: 0.45rem;
