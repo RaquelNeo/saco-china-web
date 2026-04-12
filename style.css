@@ -1519,7 +1519,14 @@ sup { font-size: 0.6em; vertical-align: super; }
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+.product-capacity {
+  margin-top: auto;
 }
 
 /* Carousel */
@@ -1546,9 +1553,10 @@ sup { font-size: 0.6em; vertical-align: super; }
 
 .carousel__controls {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0.9rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   background: var(--c-stone);
   border-top: 1px solid var(--c-border);
+  border-radius: 0 0 10px 10px;
 }
 .carousel__btn {
   display: flex; align-items: center; justify-content: center;
