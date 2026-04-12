@@ -2016,14 +2016,14 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .mat-card--highlight,
 .mat-card--dark {
-  background: var(--c-text-sec);
+  background: #a0a0a0;
 }
 .mat-card--highlight .mat-card__icon,
-.mat-card--dark .mat-card__icon { color: var(--c-gold); }
+.mat-card--dark .mat-card__icon { color: #ffffff; }
 .mat-card--highlight .mat-card__name,
 .mat-card--dark .mat-card__name { color: #ffffff; }
 .mat-card--highlight:hover,
-.mat-card--dark:hover { background: var(--c-text-mut); }
+.mat-card--dark:hover { background: #8a8a8a; }
 
 @media (max-width: 900px) {
   .mat-grid { grid-template-columns: repeat(3, 1fr); }
