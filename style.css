@@ -1560,7 +1560,6 @@ sup { font-size: 0.6em; vertical-align: super; }
   padding: 0.75rem 1.25rem;
   background: var(--c-stone);
   border-top: 1px solid var(--c-border);
-  border-radius: 0 0 10px 10px;
 }
 .carousel__btn {
   display: flex; align-items: center; justify-content: center;
