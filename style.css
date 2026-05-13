@@ -1441,12 +1441,13 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .menu-overlay__secondary a:hover { color: rgba(255,255,255,0.7); }
 
-/* Nav toggle — always visible (opens overlay on all screens) */
-.nav__toggle { display: flex !important; }
+/* Nav toggle: hidden on desktop, shown on mobile (overlay handles nav) */
+.nav__toggle { display: none; }
 
-/* Hide inline links on mobile (overlay handles it) */
+/* Hide inline links on mobile, show toggle (overlay handles it) */
 @media (max-width: 768px) {
   .nav__links { display: none !important; }
+  .nav__toggle { display: flex !important; }
 }
 
 /* Shared line button */
@@ -2474,38 +2475,6 @@ sup { font-size: 0.6em; vertical-align: super; }
 @media (max-width: 768px) {
   :root { --nav-h: 54px; }
 
-.nav__toggle { display: flex; }
-  .nav__links {
-    display: none;
-    position: fixed;
-    top: var(--nav-h); left: 0; right: 0; bottom: 0;
-    background: var(--c-dark);
-    flex-direction: column; align-items: flex-start;
-    padding: 2rem var(--gutter);
-    gap: 0;
-    overflow-y: auto; z-index: 99;
-  }
-  .nav__links.is-open { display: flex; animation: mobileIn 0.3s ease; }
-  @keyframes mobileIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .nav__link {
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    padding: 1.25rem 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.7);
-  }
-  .nav__link--cta {
-    margin-top: 1rem;
-    background: var(--c-gold); color: var(--c-dark);
-    padding: 0.9rem 1.5rem;
-    border-bottom: none;
-    width: auto; align-self: flex-start;
-  }
-
   .hero__scroll { display: none; }
   .br-desktop   { display: none; }
 
@@ -2513,27 +2482,502 @@ sup { font-size: 0.6em; vertical-align: super; }
   .certs-grid   { grid-template-columns: repeat(2, 1fr); }
   .clients-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .product-tabs {
-    overflow-x: auto; white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .product-tabs::-webkit-scrollbar { display: none; }
-
   .s-factory { min-height: auto; }
   .capabilities__grid { grid-template-columns: 1fr; }
-
-  .contact-layout { grid-template-columns: 1fr; }
-  #contact-form { max-width: 100%; width: 100%; }
-
-  .footer__inner { flex-direction: column; align-items: flex-start; }
-  .footer__copy  { text-align: left; }
 }
 
 @media (max-width: 480px) {
   .clients-grid       { grid-template-columns: 1fr 1fr; }
   .certs-grid         { grid-template-columns: repeat(2, 1fr); }
   .hero__clients      { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVENESS FIXES
+   ============================================================ */
+
+/* Global: prevent horizontal overflow on every page */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video, svg { max-width: 100%; height: auto; }
+
+/* Lock body scroll when full-screen menu is open */
+body.menu-open { overflow: hidden; touch-action: none; }
+
+/* Nav toggle — proper hit target on touch devices (visibility set in 768px MQ above) */
+.nav__toggle {
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 250;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.nav__toggle {
+  flex-direction: column;
+  gap: 5px;
+}
+.nav__toggle span {
+  pointer-events: none;
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--c-text);
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.nav__toggle.is-active span:first-child { transform: translateY(3.25px) rotate(45deg); }
+.nav__toggle.is-active span:last-child  { transform: translateY(-3.25px) rotate(-45deg); }
+.nav:not(.nav--scrolled) .nav__toggle span { background: #ffffff; }
+.nav.nav--always-dark .nav__toggle span { background: #ffffff; }
+
+/* Make overlay close button reliable on touch */
+.menu-overlay__close {
+  min-width: 48px;
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Language buttons — proper 44px touch target on all devices */
+.lang-btn {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: rgba(255,255,255,0.1);
+  touch-action: manipulation;
+}
+
+/* Overlay must be a true scroll/touch surface above everything else */
+.menu-overlay {
+  -webkit-overflow-scrolling: touch;
+}
+.menu-overlay.is-open {
+  z-index: 300;
+}
+
+/* Language group inside overlay footer — clear, tappable buttons */
+.menu-overlay__footer .lang-btn {
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  border-radius: 4px;
+  color: rgba(255,255,255,0.9) !important;
+}
+.menu-overlay__footer .lang-btn:hover,
+.menu-overlay__footer .lang-btn:focus-visible {
+  background: rgba(255,255,255,0.08);
+  outline: none;
+}
+
+/* ============================================================
+   MOBILE — 768px and below
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --gutter: max(16px, 4vw);
+    --sec-pad: clamp(3rem, 8vw, 5rem);
+  }
+
+  /* Body font scale */
+  body { font-size: 16px; line-height: 1.65; }
+
+  /* Container minimum padding */
+  .container { padding-inline: var(--gutter); }
+
+  /* HERO */
+  .hero__inner {
+    padding-top: calc(var(--nav-h) + 2.5rem);
+    padding-bottom: 2rem;
+    text-align: left;
+  }
+  .hero__headline {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.15;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+  .hero__sub {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+  .hero__card {
+    padding-inline: var(--gutter);
+    padding-block: 1.25rem;
+    gap: 1rem;
+  }
+  .hc__name { font-size: 17px; line-height: 1.2; }
+  .hc__desc { font-size: 13px; line-height: 1.55; }
+  .hc__arrow svg { width: 24px; height: 12px; }
+
+  /* SECTION HEADERS */
+  .s-header { margin-bottom: 2.25rem; }
+  .s-title {
+    font-size: clamp(26px, 7.5vw, 38px);
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+  .s-subtitle {
+    font-size: clamp(17px, 4.5vw, 22px);
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+  }
+
+  /* WHO WE ARE */
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-body { font-size: 16px; line-height: 1.65; }
+  .about-diagram { padding-top: 1rem; }
+
+  /* SACO PLATFORM */
+  .platform-intro-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .platform-intro {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+  .platform-intro__img img { aspect-ratio: 4/3; }
+
+  /* WHY BANNER */
+  .why-banner { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .why-banner__item {
+    font-size: 14px;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+
+  /* CAPABILITIES */
+  .capabilities__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .capabilities__heading { font-size: 17px; }
+  .capabilities__btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1.25rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .capabilities__grid { grid-template-columns: 1fr; gap: 1px; }
+
+  /* SACO STATS */
+  .saco-stats { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .saco-stat { padding: 1.25rem; }
+  .saco-stat__n { font-size: clamp(2.25rem, 10vw, 3.25rem); }
+  .saco-stat__label { font-size: 12px; }
+  .saco-stat__sub { font-size: 12px; }
+
+  /* TECH CARDS (Lowpact) */
+  .tech-cards { grid-template-columns: 1fr; gap: 1px; }
+  .tech-card { padding: 1.5rem 1.25rem; }
+  .tech-card__name { font-size: 22px; }
+  .tech-card__desc { font-size: 15px; line-height: 1.65; }
+
+  /* SUSTAINABILITY */
+  .sustain-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sustain-lead {
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+  }
+  .sustain-body { font-size: 15px; line-height: 1.65; }
+  .mat-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .mat-card { padding: 0.85rem 1rem; }
+  .mat-card__name { font-size: 13px; line-height: 1.3; }
+
+  /* CERTS */
+  .certs-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .cert-item {
+    padding: 1.25rem 0.75rem;
+    grid-template-rows: 50px auto;
+  }
+  .cert-item__logo { max-height: 40px; max-width: 80px; }
+  .cert-item__name {
+    font-size: 11px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  /* CLIENTS */
+  .clients-intro { font-size: 15px; line-height: 1.65; }
+  .clients-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .client-logo-item {
+    padding: 1.5rem 1rem;
+    grid-template-rows: 60px auto;
+  }
+  .client-logo-img { max-height: 32px; max-width: 110px; }
+  .client-logo-group {
+    font-size: 11px;
+    padding-top: 0.5rem;
+  }
+
+  /* CONTACT */
+  .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-cards-stack { gap: 1px; }
+  .contact-card { padding: 1.25rem; gap: 0.75rem; }
+  .contact-card__name { font-size: 17px; }
+  .contact-card__address { font-size: 13px; line-height: 1.6; }
+  .contact-link__label { min-width: 2.5rem; font-size: 11px; }
+  .contact-link__value { font-size: 13px; }
+  .contact-link { min-height: 32px; align-items: center; }
+
+  /* FORM */
+  #contact-form { padding: 16px !important; max-width: 100%; width: 100%; }
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 16px !important; /* prevents iOS auto-zoom */
+    padding: 12px !important;
+    min-height: 44px;
+  }
+  #contact-form button[type="submit"] {
+    min-height: 48px !important;
+    font-size: 15px !important;
+  }
+
+  /* LOWPACT CERT LOGOS */
+  .lowpact-certs__logos { gap: 0.75rem; }
+  .lowpact-cert-logo {
+    max-height: 60px;
+    max-width: 140px;
+    padding: 0.75rem;
+  }
+
+  /* CONTACT CTA visible button — nav__link--cta */
+  .nav__link--cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* FOOTER */
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .footer__nav { gap: 0.5rem 1.25rem; }
+  .footer__nav a { font-size: 13px; padding: 0.25rem 0; }
+  .footer__copy {
+    text-align: left;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 1rem;
+  }
+
+  /* MENU OVERLAY tweaks */
+  .menu-overlay__inner {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    padding-inline: var(--gutter);
+  }
+  .menu-overlay__link {
+    font-size: clamp(2rem, 9vw, 3rem);
+    padding: 0.75rem 0;
+    min-height: 56px;
+  }
+  .menu-overlay__link::before {
+    font-size: 11px;
+    align-self: flex-start;
+    padding-top: 0.5rem;
+  }
+  .menu-overlay__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+  }
+  .menu-overlay__cta {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .menu-overlay__secondary {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .menu-overlay__secondary a {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .menu-overlay__close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  /* MANUFACTURING page */
+  .mfg-hero { min-height: 60vh; }
+  .mfg-hero__title { font-size: clamp(28px, 8vw, 40px); }
+  .mfg-hero__sub { font-size: 15px; line-height: 1.6; }
+  .mfg-hero__card {
+    flex-wrap: wrap;
+    padding: 0.85rem 1.25rem;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .mfg-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mfg-intro__stats { justify-content: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+  .mfg-intro__text { font-size: 15px; }
+  .mfg-block,
+  .mfg-block--reverse { grid-template-columns: 1fr; gap: 1.5rem; direction: ltr; padding-block: 2rem; }
+  .mfg-block__title { font-size: clamp(22px, 6vw, 30px); }
+  .mfg-block__desc { font-size: 15px; line-height: 1.65; }
+
+  /* SILK section */
+  .silk-stats { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .silk-stat { padding: 1rem; }
+  .silk-stat__n { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  .silk-about { grid-template-columns: 1fr; gap: 1.5rem; }
+  .silk-caps__grid { grid-template-columns: 1fr; }
+  .silk-cap { font-size: 14px; padding: 1rem 1.25rem; }
+  .silk-position { padding: 1.25rem; }
+  .silk-position p { font-size: 15px; }
+
+  /* STUDIO page */
+  .studio-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .studio-intro { font-size: 15px; }
+  .studio-body { font-size: 15px; line-height: 1.65; }
+  .studio-cards { grid-template-columns: 1fr; gap: 1px; }
+  .studio-card { padding: 1.25rem; }
+  .studio-card__name { font-size: 17px; }
+  .studio-card__desc { font-size: 14px; line-height: 1.6; }
+  .studio-models { grid-template-columns: 1fr; gap: 0.75rem; }
+  .studio-model { padding: 1.25rem; }
+  .studio-model__desc { font-size: 15px; }
+  .studio-portfolio { grid-template-columns: 1fr; gap: 1rem; }
+  .studio-project__info { padding: 1rem 1.25rem; min-height: 60px; gap: 0.75rem; }
+  .studio-project__title { font-size: 14px; }
+  .book-viewer__btn { width: 40px; height: 40px; }
+
+  /* FACTORY */
+  .factory-stats { grid-template-columns: 1fr; gap: 1px; }
+  .factory-stat { padding: 1.5rem 1.25rem; }
+  .factory-stat__number { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .factory-desc { font-size: 15px; line-height: 1.65; }
+
+  /* PRODUCTS — carousels, tabs */
+  .carousel { width: 100%; overflow: hidden; }
+  .carousel__track { width: 100%; }
+  .carousel__slide { min-width: 100%; width: 100%; }
+  .carousel__slide img { width: 100%; height: auto; display: block; }
+  .carousel__btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .carousel__controls { padding: 0.5rem 0.75rem; }
+  .carousel__dot {
+    width: 8px;
+    height: 8px;
+    position: relative;
+  }
+  /* Extend tap area for carousel dots without changing visual size */
+  .carousel__dot::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+  }
+  .carousel__dots { gap: 0.6rem; padding: 8px 0; }
+
+  /* PRODUCT TABS — scroll horizontally on mobile, keep tap targets */
+  .product-tab {
+    padding: 0.85rem 1.1rem;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  .product-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+  .product-tabs::-webkit-scrollbar { display: none; }
+  .product-layout { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* About paragraphs spacing */
+  p { word-wrap: break-word; overflow-wrap: break-word; }
+
+  /* Headline breaks: allow them to wrap naturally on mobile */
+  .br-mobile-hide { display: none; }
+
+  /* Editorial link inside section header */
+  .s-header--with-link { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .editorial-link { align-self: flex-start; }
+
+  /* SECTION s-header__left should stack */
+  .s-header__left { width: 100%; }
+
+  /* Nav inner padding */
+  .nav__inner { padding-inline: var(--gutter); }
+  .nav__logo { font-size: 1.4rem; }
+
+  /* Hide trailing scroll cue if it exists */
+  .hero__scroll { display: none; }
+
+  /* Ensure overlay nav is visually centered on small screens (still left-aligned by design but with breathing room) */
+  .menu-overlay__nav { padding: 0; }
+}
+
+/* ============================================================
+   SMALL MOBILE — 480px and below (iPhone SE, etc.)
+   ============================================================ */
+@media (max-width: 480px) {
+  :root {
+    --gutter: 16px;
+    --nav-h: 56px;
+  }
+
+  body { font-size: 15px; }
+
+  .hero__headline { font-size: clamp(26px, 7.5vw, 34px); }
+  .hero__sub { font-size: 14px; }
+  .hero__cards { grid-template-columns: 1fr; }
+  .hero__card { padding: 1rem var(--gutter); }
+  .hc__name { font-size: 16px; }
+  .hc__desc { font-size: 12px; }
+
+  .s-title { font-size: clamp(24px, 7vw, 32px); }
+  .s-subtitle { font-size: 16px; }
+
+  .about-body { font-size: 15px; }
+
+  .why-banner { grid-template-columns: 1fr; }
+
+  .saco-stats { grid-template-columns: 1fr; }
+  .saco-stat__n { font-size: 2.5rem; }
+
+  .mat-grid { grid-template-columns: 1fr 1fr; }
+  .clients-grid { grid-template-columns: 1fr 1fr; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+
+  .contact-card { padding: 1rem; }
+  .contact-card__name { font-size: 16px; }
+
+  .menu-overlay__link { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+  .menu-overlay__cta { font-size: clamp(1.35rem, 6vw, 1.75rem); }
+
+  .footer__logo { font-size: 13px; }
+  .footer__nav a { font-size: 12px; }
+
+  /* Manufacturing */
+  .mfg-hero__title { font-size: clamp(24px, 7vw, 32px); }
+  .mfg-intro__stats { gap: 1rem; }
+  .mfg-stat-big__n { font-size: 2.25rem; }
+
+  /* Silk stats */
+  .silk-stats { grid-template-columns: 1fr; }
 }
 
 /* ============================================================

@@ -28,11 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateNav() {
     const scrollY = window.scrollY;
-    const scrolledDown = scrollY > lastScrollY;
-    const isPastThreshold = scrollY > 100;
-
     nav.classList.toggle('nav--scrolled', scrollY > 60);
-
     lastScrollY = scrollY;
     ticking = false;
   }
@@ -43,32 +39,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Full-screen overlay ---- */
   function openMenu() {
+    if (!overlay) return;
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
-    toggle.classList.add('is-active');
-    toggle.setAttribute('aria-expanded', 'true');
+    if (toggle) {
+      toggle.classList.add('is-active');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+    }
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
     nav.classList.remove('nav--hidden');
   }
 
   function closeMenu() {
+    if (!overlay) return;
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden', 'true');
-    toggle.classList.remove('is-active');
-    toggle.setAttribute('aria-expanded', 'false');
+    if (toggle) {
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   }
 
   if (toggle && overlay) {
-    toggle.addEventListener('click', () => {
+    // Use pointerdown for fastest response on touch + mouse;
+    // fall back to click for keyboard/accessibility.
+    let handledByPointer = false;
+    const onToggle = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       overlay.classList.contains('is-open') ? closeMenu() : openMenu();
+    };
+    toggle.addEventListener('pointerdown', (e) => {
+      handledByPointer = true;
+      onToggle(e);
+      setTimeout(() => { handledByPointer = false; }, 400);
+    });
+    toggle.addEventListener('click', (e) => {
+      if (handledByPointer) { e.preventDefault(); return; }
+      onToggle(e);
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); });
+    }
 
-    // Close on any nav link click (smooth scroll then close)
+    // Close on nav link clicks (NOT on language buttons or non-link controls)
     overlay.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
+      link.addEventListener('click', () => {
+        // Allow link navigation to proceed; just close the overlay.
+        closeMenu();
+      });
     });
 
     // ESC to close
