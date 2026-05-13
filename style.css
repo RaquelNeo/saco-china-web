@@ -1441,13 +1441,139 @@ sup { font-size: 0.6em; vertical-align: super; }
 }
 .menu-overlay__secondary a:hover { color: rgba(255,255,255,0.7); }
 
-/* Nav toggle: hidden on desktop, shown on mobile (overlay handles nav) */
+/* Nav toggle: hidden on desktop, shown on mobile */
 .nav__toggle { display: none; }
 
-/* Hide inline links on mobile, show toggle (overlay handles it) */
+/* ============================================================
+   MOBILE NAV DROPDOWN (compact, site-styled)
+   Replaces full-screen overlay below 768px.
+   ============================================================ */
 @media (max-width: 768px) {
-  .nav__links { display: none !important; }
+  /* Hide the legacy full-screen overlay completely on mobile */
+  .menu-overlay { display: none !important; }
+
+  /* Show hamburger */
   .nav__toggle { display: flex !important; }
+
+  /* Position context for the dropdown */
+  .nav__inner { position: relative; }
+
+  /* Closed by default on mobile */
+  .nav__links {
+    display: none;
+  }
+
+  /* Open: compact dropdown panel anchored to the nav bar */
+  .nav__links.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: var(--gutter);
+    width: min(280px, calc(100vw - 2 * var(--gutter)));
+    padding: 6px 0;
+    background: var(--c-cream);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    z-index: 220;
+    animation: navDropIn 0.22s ease;
+    overflow: hidden;
+  }
+  @keyframes navDropIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* List items as full-width rows */
+  .nav__links.is-open > li {
+    width: 100%;
+    list-style: none;
+  }
+
+  /* Links: match site typography (Outfit, uppercase, tracked) */
+  .nav__links.is-open .nav__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 12px 18px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-text);
+    border-bottom: 1px solid var(--c-border);
+    background: transparent;
+    border-radius: 0;
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+  .nav__links.is-open .nav__link:hover,
+  .nav__links.is-open .nav__link:focus-visible {
+    background: var(--c-stone);
+    color: var(--c-text);
+    opacity: 1;
+    outline: none;
+  }
+
+  /* CTA "Contact" — keep dark filled style but compact */
+  .nav__links.is-open .nav__link--cta {
+    margin: 6px 12px 4px;
+    padding: 11px 16px;
+    background: var(--c-text);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .nav__links.is-open .nav__link--cta:hover {
+    background: var(--c-text-sec);
+    opacity: 1;
+  }
+  .nav__links.is-open > li:last-child .nav__link {
+    border-bottom: none;
+  }
+
+  /* Language selector row */
+  .nav__links.is-open .nav__lang-group {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .nav__links.is-open .nav__lang-group .lang-btn {
+    flex: 1;
+    min-height: 40px;
+    min-width: 44px;
+    padding: 8px 10px !important;
+    font-family: var(--font-body) !important;
+    font-size: 12px !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-text) !important;
+    background: transparent !important;
+    border: 1px solid var(--c-border) !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav__links.is-open .nav__lang-group .lang-btn:hover {
+    background: var(--c-stone) !important;
+  }
+  /* Active language: filled dark pill */
+  .nav__links.is-open .nav__lang-group .lang-btn.is-active {
+    background: var(--c-text) !important;
+    color: #ffffff !important;
+    border-color: var(--c-text) !important;
+    opacity: 1 !important;
+  }
 }
 
 /* Shared line button */
@@ -2500,9 +2626,6 @@ sup { font-size: 0.6em; vertical-align: super; }
 html, body { max-width: 100%; overflow-x: hidden; }
 img, video, svg { max-width: 100%; height: auto; }
 
-/* Lock body scroll when full-screen menu is open */
-body.menu-open { overflow: hidden; touch-action: none; }
-
 /* Nav toggle — proper hit target on touch devices (visibility set in 768px MQ above) */
 .nav__toggle {
   align-items: center;
@@ -2537,45 +2660,13 @@ body.menu-open { overflow: hidden; touch-action: none; }
 .nav:not(.nav--scrolled) .nav__toggle span { background: #ffffff; }
 .nav.nav--always-dark .nav__toggle span { background: #ffffff; }
 
-/* Make overlay close button reliable on touch */
-.menu-overlay__close {
-  min-width: 48px;
-  min-height: 48px;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  cursor: pointer;
-}
-
-/* Language buttons — proper 44px touch target on all devices */
+/* Language buttons — sensible tap area everywhere */
 .lang-btn {
-  min-height: 44px;
-  min-width: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  -webkit-tap-highlight-color: rgba(255,255,255,0.1);
+  -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-}
-
-/* Overlay must be a true scroll/touch surface above everything else */
-.menu-overlay {
-  -webkit-overflow-scrolling: touch;
-}
-.menu-overlay.is-open {
-  z-index: 300;
-}
-
-/* Language group inside overlay footer — clear, tappable buttons */
-.menu-overlay__footer .lang-btn {
-  padding: 8px 12px !important;
-  font-size: 14px !important;
-  border-radius: 4px;
-  color: rgba(255,255,255,0.9) !important;
-}
-.menu-overlay__footer .lang-btn:hover,
-.menu-overlay__footer .lang-btn:focus-visible {
-  background: rgba(255,255,255,0.08);
-  outline: none;
 }
 
 /* ============================================================
@@ -2776,45 +2867,6 @@ body.menu-open { overflow: hidden; touch-action: none; }
     padding-top: 1rem;
   }
 
-  /* MENU OVERLAY tweaks */
-  .menu-overlay__inner {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    padding-inline: var(--gutter);
-  }
-  .menu-overlay__link {
-    font-size: clamp(2rem, 9vw, 3rem);
-    padding: 0.75rem 0;
-    min-height: 56px;
-  }
-  .menu-overlay__link::before {
-    font-size: 11px;
-    align-self: flex-start;
-    padding-top: 0.5rem;
-  }
-  .menu-overlay__footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-    padding-top: 1.5rem;
-  }
-  .menu-overlay__cta {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-  }
-  .menu-overlay__secondary {
-    align-items: flex-start;
-    text-align: left;
-  }
-  .menu-overlay__secondary a {
-    min-height: 36px;
-    display: inline-flex;
-    align-items: center;
-  }
-  .menu-overlay__close {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
   /* MANUFACTURING page */
   .mfg-hero { min-height: 60vh; }
   .mfg-hero__title { font-size: clamp(28px, 8vw, 40px); }
@@ -2925,9 +2977,6 @@ body.menu-open { overflow: hidden; touch-action: none; }
 
   /* Hide trailing scroll cue if it exists */
   .hero__scroll { display: none; }
-
-  /* Ensure overlay nav is visually centered on small screens (still left-aligned by design but with breathing room) */
-  .menu-overlay__nav { padding: 0; }
 }
 
 /* ============================================================
@@ -2964,9 +3013,6 @@ body.menu-open { overflow: hidden; touch-action: none; }
 
   .contact-card { padding: 1rem; }
   .contact-card__name { font-size: 16px; }
-
-  .menu-overlay__link { font-size: clamp(1.75rem, 8vw, 2.5rem); }
-  .menu-overlay__cta { font-size: clamp(1.35rem, 6vw, 1.75rem); }
 
   .footer__logo { font-size: 13px; }
   .footer__nav a { font-size: 12px; }

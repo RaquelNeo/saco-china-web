@@ -919,8 +919,10 @@
 
     // Update active language button styles
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.style.fontWeight = btn.getAttribute('data-lang') === lang ? '700' : '400';
-      btn.style.opacity = btn.getAttribute('data-lang') === lang ? '1' : '0.6';
+      var isActive = btn.getAttribute('data-lang') === lang;
+      btn.style.fontWeight = isActive ? '700' : '400';
+      btn.style.opacity = isActive ? '1' : '0.6';
+      btn.classList.toggle('is-active', isActive);
     });
 
     // Update html lang attribute
