@@ -1140,6 +1140,7 @@ sup { font-size: 0.6em; vertical-align: super; }
   transition: transform var(--slow);
 }
 .tech-card:hover::before { transform: scaleX(1); }
+.tech-card--link { display: block; color: inherit; text-decoration: none; }
 
 .tech-card__mark {
   font-family: var(--font-body);
