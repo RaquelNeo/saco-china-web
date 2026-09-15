@@ -36,7 +36,7 @@
       "hero-card-saco-name":   "Shanghai Saco Textile",
       "hero-card-saco-desc":   "Manufacturing &amp; finished product development<br>hosiery, seamless, underwear, babywear and silk",
       "hero-card-lowpact-name":"Lowpact Textile Technology",
-      "hero-card-lowpact-desc":"Low-impact yarn, dyeing and material technologies<br>IndiDye<sup>\u00AE</sup>, SoftSpin<sup>\u2122</sup>, Resilkose<sup>\u2122</sup>",
+      "hero-card-lowpact-desc":"Low-impact yarn, dyeing and material technologies<br>IndiDye<sup>\u00AE</sup>, SoftSpin<sup>\u2122</sup>, EcoSh\u0101n<sup>\u2122</sup>",
       "hero-scroll":       "Scroll",
 
       // Who We Are
@@ -75,7 +75,7 @@
       // Sustainability
       "sustain-title":     "Sustainability",
       "sustain-lead":      "Embedded in technology, not added as a final layer",
-      "sustain-body":      "Our approach focuses on reducing chemicals, water use and waste at the source, prioritising physical and mechanical solutions over chemical finishes. From IndiDye<sup>\u00AE</sup> plant-based dyeing to SoftSpin<sup>\u2122</sup> chemical-free softening and Resilkose<sup>\u2122</sup> circular silk \u2014 sustainability is built into the material itself.",
+      "sustain-body":      "Our approach focuses on reducing chemicals, water use and waste at the source, prioritising physical and mechanical solutions over chemical finishes. From IndiDye<sup>\u00AE</sup> plant-based dyeing to SoftSpin<sup>\u2122</sup> chemical-free softening and EcoSh\u0101n<sup>\u2122</sup> tree-grown cotton \u2014 sustainability is built into the material itself.",
       "sustain-materials-title": "Responsible Materials",
       "mat-organic-cotton":  "Organic Cotton",
       "mat-recycled-silk":   "Recycled &amp; Organic Silk \u2197",
@@ -111,8 +111,8 @@
       "tech-indidye-desc":   "High-performance natural plant dyes with low environmental impact. A closed-loop dyeing process that eliminates synthetic colorants without compromising colour fastness or vibrancy.",
       "tech-softspin-name":  "SoftSpin<sup>\u2122</sup>",
       "tech-softspin-desc":  "Patented spinning technology delivering premium softness without chemical softeners. Produces yarns with exceptional hand-feel that maintain their properties through repeated washing.",
-      "tech-resilkose-name": "Resilkose<sup>\u2122</sup>",
-      "tech-resilkose-desc": "GRS-certified recycled and organic silk for circular premium textiles. Maintains the luxurious qualities of silk while significantly reducing the environmental footprint of silk production.",
+      "tech-ecoshan-name": "EcoSh\u0101n<sup>\u2122</sup>",
+      "tech-ecoshan-desc": "A game-changing tree cotton from the subtropical highlands of southern China. Planted once and harvested twice a year for over 50 years, it grows on rainfall alone and yields a soft, strong 32\u201335 mm long-staple fibre for high-grade textiles.",
       "lowpact-certs-label": "Certifications & Standards",
 
       // Contact
@@ -212,7 +212,7 @@
       "prod-silk-desc":     "Silk garment developments focused on material performance, durability and production consistency. Conventional, recycled and organic silk options for garments and home textiles.",
       "prod-silk-mat-title":"Materials & Compositions",
       "prod-silk-mat-1":   "Conventional silk",
-      "prod-silk-mat-2":   "Resilkose<sup>\u2122</sup> recycled silk",
+      "prod-silk-mat-2":   "Recycled silk",
       "prod-silk-mat-3":   "Organic silk (GRS certified)",
       "prod-silk-cap-fig": "Garments",
       "prod-silk-cap-unit":"& home textiles",
@@ -332,7 +332,7 @@
       "hero-card-saco-name":   "Shanghai Saco Textile",
       "hero-card-saco-desc":   "Fabricaci\u00F3n y desarrollo de producto terminado<br>calceter\u00EDa, seamless, ropa interior, beb\u00E9 y seda",
       "hero-card-lowpact-name":"Lowpact Textile Technology",
-      "hero-card-lowpact-desc":"Tecnolog\u00EDas de hilado, tinte y materiales de bajo impacto<br>IndiDye<sup>\u00AE</sup>, SoftSpin<sup>\u2122</sup>, Resilkose<sup>\u2122</sup>",
+      "hero-card-lowpact-desc":"Tecnolog\u00EDas de hilado, tinte y materiales de bajo impacto<br>IndiDye<sup>\u00AE</sup>, SoftSpin<sup>\u2122</sup>, EcoSh\u0101n<sup>\u2122</sup>",
       "hero-scroll":       "Desplazar",
 
       "about-title":       "Qui\u00E9nes Somos",
@@ -367,7 +367,7 @@
 
       "sustain-title":     "Sostenibilidad",
       "sustain-lead":      "Integrada en la tecnolog\u00EDa, no a\u00F1adida como capa final",
-      "sustain-body":      "Nuestro enfoque se centra en reducir qu\u00EDmicos, consumo de agua y residuos en el origen, priorizando soluciones f\u00EDsicas y mec\u00E1nicas sobre acabados qu\u00EDmicos. Desde el tinte vegetal IndiDye<sup>\u00AE</sup> hasta el suavizado sin qu\u00EDmicos SoftSpin<sup>\u2122</sup> y la seda circular Resilkose<sup>\u2122</sup> \u2014 la sostenibilidad est\u00E1 incorporada en el propio material.",
+      "sustain-body":      "Nuestro enfoque se centra en reducir qu\u00EDmicos, consumo de agua y residuos en el origen, priorizando soluciones f\u00EDsicas y mec\u00E1nicas sobre acabados qu\u00EDmicos. Desde el tinte vegetal IndiDye<sup>\u00AE</sup> hasta el suavizado sin qu\u00EDmicos SoftSpin<sup>\u2122</sup> y el algod\u00F3n de \u00E1rbol EcoSh\u0101n<sup>\u2122</sup> \u2014 la sostenibilidad est\u00E1 incorporada en el propio material.",
       "sustain-materials-title": "Materiales Responsables",
       "mat-organic-cotton":  "Algod\u00F3n Org\u00E1nico",
       "mat-recycled-silk":   "Seda Reciclada y Org\u00E1nica \u2197",
@@ -401,8 +401,8 @@
       "tech-indidye-desc":   "Tintes naturales vegetales de alto rendimiento con bajo impacto ambiental. Un proceso de te\u00F1ido en circuito cerrado que elimina colorantes sint\u00E9ticos sin comprometer la solidez ni la intensidad del color.",
       "tech-softspin-name":  "SoftSpin<sup>\u2122</sup>",
       "tech-softspin-desc":  "Tecnolog\u00EDa de hilado patentada que ofrece suavidad premium sin suavizantes qu\u00EDmicos. Produce hilados con un tacto excepcional que mantienen sus propiedades tras lavados repetidos.",
-      "tech-resilkose-name": "Resilkose<sup>\u2122</sup>",
-      "tech-resilkose-desc": "Seda reciclada y org\u00E1nica certificada GRS para textiles premium circulares. Mantiene las cualidades lujosas de la seda reduciendo significativamente la huella ambiental de su producci\u00F3n.",
+      "tech-ecoshan-name": "EcoSh\u0101n<sup>\u2122</sup>",
+      "tech-ecoshan-desc": "Un algod\u00F3n de \u00E1rbol revolucionario de las tierras altas subtropicales del sur de China. Se planta una vez y se cosecha dos veces al a\u00F1o durante m\u00E1s de 50 a\u00F1os, solo con agua de lluvia, y da una fibra larga de 32\u201335 mm, suave y resistente, para textiles de alta gama.",
       "lowpact-certs-label": "Certificaciones y Est\u00E1ndares",
 
       "contact-title":       "Cont\u00E1ctenos",
@@ -500,7 +500,7 @@
       "prod-silk-desc":     "Desarrollos de prendas de seda centrados en rendimiento del material, durabilidad y consistencia de producci\u00F3n. Opciones de seda convencional, reciclada y org\u00E1nica para prendas y textiles del hogar.",
       "prod-silk-mat-title":"Materiales y Composiciones",
       "prod-silk-mat-1":   "Seda convencional",
-      "prod-silk-mat-2":   "Seda reciclada Resilkose<sup>\u2122</sup>",
+      "prod-silk-mat-2":   "Seda reciclada",
       "prod-silk-mat-3":   "Seda org\u00E1nica (certificaci\u00F3n GRS)",
       "prod-silk-cap-fig": "Prendas",
       "prod-silk-cap-unit":"y textiles del hogar",
@@ -617,7 +617,7 @@
       "hero-card-saco-name":   "Shanghai Saco Textile",
       "hero-card-saco-desc":   "\u88FD\u9020\u304A\u3088\u3073\u5B8C\u6210\u54C1\u958B\u767A<br>\u30DB\u30FC\u30B8\u30A7\u30EA\u30FC\u3001\u30B7\u30FC\u30E0\u30EC\u30B9\u3001\u4E0B\u7740\u3001\u30D9\u30D3\u30FC\u30A6\u30A7\u30A2\u3001\u30B7\u30EB\u30AF",
       "hero-card-lowpact-name":"Lowpact Textile Technology",
-      "hero-card-lowpact-desc":"\u4F4E\u74B0\u5883\u8CA0\u8377\u306E\u7CF8\u30FB\u67D3\u8272\u30FB\u7D20\u6750\u6280\u8853<br>IndiDye<sup>\u00AE</sup>\u3001SoftSpin<sup>\u2122</sup>\u3001Resilkose<sup>\u2122</sup>",
+      "hero-card-lowpact-desc":"\u4F4E\u74B0\u5883\u8CA0\u8377\u306E\u7CF8\u30FB\u67D3\u8272\u30FB\u7D20\u6750\u6280\u8853<br>IndiDye<sup>\u00AE</sup>\u3001SoftSpin<sup>\u2122</sup>\u3001EcoSh\u0101n<sup>\u2122</sup>",
       "hero-scroll":       "\u30B9\u30AF\u30ED\u30FC\u30EB",
 
       "about-title":       "\u4F1A\u793E\u6982\u8981",
@@ -652,7 +652,7 @@
 
       "sustain-title":     "\u30B5\u30B9\u30C6\u30CA\u30D3\u30EA\u30C6\u30A3",
       "sustain-lead":      "\u6700\u7D42\u5DE5\u7A0B\u306E\u4ED8\u52A0\u3067\u306F\u306A\u304F\u3001\u6280\u8853\u306B\u7D44\u307F\u8FBC\u307E\u308C\u3066\u3044\u307E\u3059",
-      "sustain-body":      "\u5F53\u793E\u306E\u30A2\u30D7\u30ED\u30FC\u30C1\u306F\u3001\u5316\u5B66\u7269\u8CEA\u3001\u6C34\u4F7F\u7528\u91CF\u3001\u5EC3\u68C4\u7269\u3092\u6E90\u6D41\u3067\u524A\u6E1B\u3059\u308B\u3053\u3068\u306B\u91CD\u70B9\u3092\u7F6E\u304D\u3001\u5316\u5B66\u4ED5\u4E0A\u3052\u3088\u308A\u3082\u7269\u7406\u7684\u30FB\u6A5F\u68B0\u7684\u30BD\u30EA\u30E5\u30FC\u30B7\u30E7\u30F3\u3092\u512A\u5148\u3057\u3066\u3044\u307E\u3059\u3002IndiDye<sup>\u00AE</sup>\u690D\u7269\u67D3\u6599\u304B\u3089SoftSpin<sup>\u2122</sup>\u7121\u5316\u5B66\u67D4\u8EDF\u5316\u3001Resilkose<sup>\u2122</sup>\u5FAA\u74B0\u578B\u30B7\u30EB\u30AF\u307E\u3067 \u2014 \u30B5\u30B9\u30C6\u30CA\u30D3\u30EA\u30C6\u30A3\u306F\u7D20\u6750\u305D\u306E\u3082\u306E\u306B\u7D44\u307F\u8FBC\u307E\u308C\u3066\u3044\u307E\u3059\u3002",
+      "sustain-body":      "\u5F53\u793E\u306E\u30A2\u30D7\u30ED\u30FC\u30C1\u306F\u3001\u5316\u5B66\u7269\u8CEA\u3001\u6C34\u4F7F\u7528\u91CF\u3001\u5EC3\u68C4\u7269\u3092\u6E90\u6D41\u3067\u524A\u6E1B\u3059\u308B\u3053\u3068\u306B\u91CD\u70B9\u3092\u7F6E\u304D\u3001\u5316\u5B66\u4ED5\u4E0A\u3052\u3088\u308A\u3082\u7269\u7406\u7684\u30FB\u6A5F\u68B0\u7684\u30BD\u30EA\u30E5\u30FC\u30B7\u30E7\u30F3\u3092\u512A\u5148\u3057\u3066\u3044\u307E\u3059\u3002IndiDye<sup>\u00AE</sup>\u690D\u7269\u67D3\u6599\u304B\u3089SoftSpin<sup>\u2122</sup>\u7121\u5316\u5B66\u67D4\u8EDF\u5316\u3001EcoSh\u0101n<sup>\u2122</sup>\u4F4E\u74B0\u5883\u8CA0\u8377\u30C4\u30EA\u30FC\u30B3\u30C3\u30C8\u30F3\u307E\u3067 \u2014 \u30B5\u30B9\u30C6\u30CA\u30D3\u30EA\u30C6\u30A3\u306F\u7D20\u6750\u305D\u306E\u3082\u306E\u306B\u7D44\u307F\u8FBC\u307E\u308C\u3066\u3044\u307E\u3059\u3002",
       "sustain-materials-title": "\u8CAC\u4EFB\u3042\u308B\u7D20\u6750",
       "mat-organic-cotton":  "\u30AA\u30FC\u30AC\u30CB\u30C3\u30AF\u30B3\u30C3\u30C8\u30F3",
       "mat-recycled-silk":   "\u30EA\u30B5\u30A4\u30AF\u30EB\u30FB\u30AA\u30FC\u30AC\u30CB\u30C3\u30AF\u30B7\u30EB\u30AF \u2197",
@@ -686,8 +686,8 @@
       "tech-indidye-desc":   "\u4F4E\u74B0\u5883\u8CA0\u8377\u306E\u9AD8\u6027\u80FD\u5929\u7136\u690D\u7269\u67D3\u6599\u3002\u5408\u6210\u7740\u8272\u5264\u3092\u6392\u9664\u3057\u3064\u3064\u3001\u8272\u306E\u5805\u7262\u5EA6\u3084\u9BAE\u3084\u304B\u3055\u3092\u640D\u306A\u308F\u306A\u3044\u30AF\u30ED\u30FC\u30BA\u30C9\u30EB\u30FC\u30D7\u67D3\u8272\u30D7\u30ED\u30BB\u30B9\u3067\u3059\u3002",
       "tech-softspin-name":  "SoftSpin<sup>\u2122</sup>",
       "tech-softspin-desc":  "\u5316\u5B66\u67D4\u8EDF\u5264\u3092\u4F7F\u7528\u305B\u305A\u306B\u30D7\u30EC\u30DF\u30A2\u30E0\u306A\u67D4\u3089\u304B\u3055\u3092\u5B9F\u73FE\u3059\u308B\u7279\u8A31\u7D21\u7E3E\u6280\u8853\u3002\u7E70\u308A\u8FD4\u3057\u306E\u6D17\u6FEF\u3067\u3082\u7279\u6027\u3092\u7DAD\u6301\u3059\u308B\u512A\u308C\u305F\u98A8\u5408\u3044\u306E\u7CF8\u3092\u751F\u7523\u3057\u307E\u3059\u3002",
-      "tech-resilkose-name": "Resilkose<sup>\u2122</sup>",
-      "tech-resilkose-desc": "\u30B5\u30FC\u30AD\u30E5\u30E9\u30FC\u30D7\u30EC\u30DF\u30A2\u30E0\u30C6\u30AD\u30B9\u30BF\u30A4\u30EB\u5411\u3051GRS\u8A8D\u8A3C\u30EA\u30B5\u30A4\u30AF\u30EB\u30FB\u30AA\u30FC\u30AC\u30CB\u30C3\u30AF\u30B7\u30EB\u30AF\u3002\u30B7\u30EB\u30AF\u751F\u7523\u306E\u74B0\u5883\u8CA0\u8377\u3092\u5927\u5E45\u306B\u524A\u6E1B\u3057\u3064\u3064\u3001\u30B7\u30EB\u30AF\u306E\u8C6A\u83EF\u306A\u54C1\u8CEA\u3092\u7DAD\u6301\u3057\u307E\u3059\u3002",
+      "tech-ecoshan-name": "EcoSh\u0101n<sup>\u2122</sup>",
+      "tech-ecoshan-desc": "\u4E2D\u56FD\u5357\u90E8\u306E\u4E9C\u71B1\u5E2F\u9AD8\u5730\u3067\u80B2\u3064\u753B\u671F\u7684\u306A\u30C4\u30EA\u30FC\u30B3\u30C3\u30C8\u30F3\u3002\u4E00\u5EA6\u690D\u3048\u308C\u3070\u5E742\u56DE\u300150\u5E74\u4EE5\u4E0A\u306B\u308F\u305F\u3063\u3066\u53CE\u7A6B\u3067\u304D\u3001\u96E8\u6C34\u3060\u3051\u3067\u80B2\u3061\u307E\u3059\u300232\u201335mm\u306E\u67D4\u3089\u304B\u304F\u5F37\u3044\u9577\u7E4A\u7DAD\u306F\u3001\u9AD8\u54C1\u8CEA\u306A\u30C6\u30AD\u30B9\u30BF\u30A4\u30EB\u306B\u6700\u9069\u3067\u3059\u3002",
       "lowpact-certs-label": "\u8A8D\u8A3C\u30FB\u57FA\u6E96",
 
       "contact-title":       "\u304A\u554F\u3044\u5408\u308F\u305B",
@@ -785,7 +785,7 @@
       "prod-silk-desc":     "\u7D20\u6750\u6027\u80FD\u3001\u8010\u4E45\u6027\u3001\u751F\u7523\u306E\u4E00\u8CAB\u6027\u306B\u91CD\u70B9\u3092\u7F6E\u3044\u305F\u30B7\u30EB\u30AF\u88FD\u54C1\u958B\u767A\u3002\u88FD\u54C1\u304A\u3088\u3073\u30DB\u30FC\u30E0\u30C6\u30AD\u30B9\u30BF\u30A4\u30EB\u5411\u3051\u306E\u5F93\u6765\u578B\u3001\u30EA\u30B5\u30A4\u30AF\u30EB\u3001\u30AA\u30FC\u30AC\u30CB\u30C3\u30AF\u30B7\u30EB\u30AF\u30AA\u30D7\u30B7\u30E7\u30F3\u3002",
       "prod-silk-mat-title":"\u7D20\u6750\u30FB\u7D44\u6210",
       "prod-silk-mat-1":   "\u5F93\u6765\u578B\u30B7\u30EB\u30AF",
-      "prod-silk-mat-2":   "Resilkose<sup>\u2122</sup>\u30EA\u30B5\u30A4\u30AF\u30EB\u30B7\u30EB\u30AF",
+      "prod-silk-mat-2":   "\u30EA\u30B5\u30A4\u30AF\u30EB\u30B7\u30EB\u30AF",
       "prod-silk-mat-3":   "\u30AA\u30FC\u30AC\u30CB\u30C3\u30AF\u30B7\u30EB\u30AF\uFF08GRS\u8A8D\u8A3C\uFF09",
       "prod-silk-cap-fig": "\u88FD\u54C1",
       "prod-silk-cap-unit":"\u30FB\u30DB\u30FC\u30E0\u30C6\u30AD\u30B9\u30BF\u30A4\u30EB",
