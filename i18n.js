@@ -878,6 +878,118 @@
     }
   };
 
+
+  /* ────── SACO INTIMATES (intimates.html) ────── */
+  var intimates = {
+    "en": {
+      "int-hero-badge": "Saco Group Division",
+      "int-hero-title": "SACO Intimates",
+      "int-hero-sub": "Women’s lingerie, underwear and activewear — from design and 3D sampling to certified production for international brands.",
+      "int-hero-back": "← Back to Shanghai Saco Textile",
+      "int-intro": "SACO Intimates is the lingerie and underwear division of SACO Group. Since 1997 we have been developing and manufacturing durable, comfortable next-to-skin products for retailers and specialised technical brands worldwide, through strategic partner factories in China and Cambodia.",
+      "int-stat-year-label": "Established",
+      "int-stat-year-sub": "Over two decades in intimates",
+      "int-stat-fact-label": "Partner Factories",
+      "int-stat-fact-sub": "Yichun & Luhan, China",
+      "int-stat-cap-label": "Pieces / Month",
+      "int-stat-cap-sub": "Combined production capacity",
+      "int-stat-cat-label": "Product Categories",
+      "int-stat-cat-sub": "Bonded to period underwear",
+      "int-cats-heading": "Product Categories",
+      "int-cat-bonded-t": "Bonded",
+      "int-cat-bonded-d": "Bonded technology and breathable cups for a smooth, invisible fit. Ideal for daily wear.",
+      "int-cat-seamless-t": "Seamless",
+      "int-cat-seamless-d": "Knitted on advanced seamless machines for a mark-free finish and a second-skin feel.",
+      "int-cat-cut-t": "Cut & Sewn",
+      "int-cat-cut-d": "Lace, microfibre and cotton styles built through cut-and-sew, with a wide range of customised designs.",
+      "int-cat-active-t": "Activewear",
+      "int-cat-active-d": "Support and comfort during movement, in breathable and durable performance materials.",
+      "int-cat-period-t": "Period Underwear",
+      "int-cat-period-d": "Leak-proof underwear that combines absorbent protection with everyday style.",
+      "int-cat-dyes-t": "Natural Dyes",
+      "int-fact-heading": "Partner Factories",
+      "int-fact-yichun": "Yichun Factory",
+      "int-fact-yichun-main": "Bonded underwear",
+      "int-spec-area": "Area",
+      "int-spec-workers": "Workers",
+      "int-spec-cap": "Capacity / month",
+      "int-fact-luhan": "Luhan Factory",
+      "int-design-h": "Design & 3D Sampling",
+      "int-design-p": "We create trend-driven designs tailored to each brand. Digital 3D samples let clients visualise and refine every style before physical production begins, shortening development time.",
+      "int-quality-h": "Quality Assurance",
+      "int-quality-p": "Our quality controllers run periodic checks throughout production, so bulk orders consistently match the standards approved by each client. Waste management and recycling practices are applied in every factory.",
+      "int-certs-heading": "Certifications",
+      "int-clients-heading": "Brands We Work With",
+      "int-position": "Your partner for sustainable, premium underwear — delivering quality and reliability from the first sketch to the last carton.",
+      "int-cta": "Contact SACO Intimates →",
+      "int-cat-dyes-d": "Plant-based colour with IndiDye<sup>&reg;</sup>, our sister company&rsquo;s ultrasonic natural dyeing technology.",
+      "int-fact-luhan-main": "Seamless and cut &amp; sewn underwear",
+      "nav-intimates": "SACO Intimates",
+      "int-saco-link": "Discover SACO Intimates, our lingerie division →",
+      "prod-underwear-division": "SACO Intimates — our lingerie division →",
+      "nav-lingerie": "Intimates",
+      "int-cert-ocs": "Organic Content Standard",
+      "int-cert-snds": "Sustainable Natural Dyes Standard",
+      "int-cert-wrap": "Responsible Accredited Production",
+      "int-cert-higg": "Higg Index"
+    },
+    "es": {
+      "int-hero-badge": "División de Saco Group",
+      "int-hero-title": "SACO Intimates",
+      "int-hero-sub": "Lencería, ropa interior y activewear de mujer: del diseño y la muestra 3D a la producción certificada para marcas internacionales.",
+      "int-hero-back": "← Volver a Shanghai Saco Textile",
+      "int-intro": "SACO Intimates es la división de lencería y ropa interior de SACO Group. Desde 1997 desarrollamos y fabricamos prendas cómodas y duraderas en contacto con la piel para retailers y marcas técnicas especializadas de todo el mundo, a través de fábricas asociadas en China y Camboya.",
+      "int-stat-year-label": "Fundada",
+      "int-stat-year-sub": "Más de dos décadas en lencería",
+      "int-stat-fact-label": "Fábricas asociadas",
+      "int-stat-fact-sub": "Yichun y Luhan, China",
+      "int-stat-cap-label": "Piezas / mes",
+      "int-stat-cap-sub": "Capacidad de producción conjunta",
+      "int-stat-cat-label": "Categorías de producto",
+      "int-stat-cat-sub": "De bonded a ropa interior menstrual",
+      "int-cats-heading": "Categorías de producto",
+      "int-cat-bonded-t": "Bonded",
+      "int-cat-bonded-d": "Tecnología bonded y copas transpirables para un ajuste liso e invisible. Ideal para el día a día.",
+      "int-cat-seamless-t": "Seamless",
+      "int-cat-seamless-d": "Tejida en máquinas seamless de última generación para un acabado sin marcas y sensación de segunda piel.",
+      "int-cat-cut-t": "Cut & Sewn",
+      "int-cat-cut-d": "Encaje, microfibra y algodón en confección corte y cosido, con una amplia variedad de diseños personalizados.",
+      "int-cat-active-t": "Activewear",
+      "int-cat-active-d": "Sujeción y comodidad en movimiento, con materiales técnicos transpirables y resistentes.",
+      "int-cat-period-t": "Ropa interior menstrual",
+      "int-cat-period-d": "Braguitas antifugas que combinan protección absorbente y estilo para cada día.",
+      "int-cat-dyes-t": "Tintes naturales",
+      "int-cat-dyes-d": "Color de origen vegetal con IndiDye<sup>®</sup>, la tecnología de tintura natural por ultrasonidos de nuestra empresa hermana.",
+      "int-fact-heading": "Fábricas asociadas",
+      "int-fact-yichun": "Fábrica de Yichun",
+      "int-fact-yichun-main": "Ropa interior bonded",
+      "int-fact-luhan": "Fábrica de Luhan",
+      "int-fact-luhan-main": "Ropa interior seamless y cut &amp; sewn",
+      "int-spec-area": "Superficie",
+      "int-spec-workers": "Trabajadores",
+      "int-spec-cap": "Capacidad / mes",
+      "int-design-h": "Diseño y muestras 3D",
+      "int-design-p": "Creamos diseños a medida de cada marca y alineados con las tendencias. Las muestras digitales en 3D permiten visualizar y ajustar cada modelo antes de la producción física, acortando el desarrollo.",
+      "int-quality-h": "Control de calidad",
+      "int-quality-p": "Nuestros controladores de calidad revisan periódicamente todo el proceso, para que la producción coincida siempre con los estándares aprobados por cada cliente. Aplicamos gestión de residuos y reciclaje en todas las fábricas.",
+      "int-certs-heading": "Certificaciones",
+      "int-clients-heading": "Marcas con las que trabajamos",
+      "int-position": "Tu partner para ropa interior premium y sostenible: calidad y fiabilidad desde el primer boceto hasta la última caja.",
+      "int-cta": "Contactar con SACO Intimates →",
+      "nav-intimates": "SACO Intimates",
+      "int-saco-link": "Descubre SACO Intimates, nuestra división de lencería →",
+      "prod-underwear-division": "SACO Intimates — nuestra división de lencería →",
+      "nav-lingerie": "Intimates",
+      "int-cert-ocs": "Organic Content Standard",
+      "int-cert-snds": "Sustainable Natural Dyes Standard",
+      "int-cert-wrap": "Responsible Accredited Production",
+      "int-cert-higg": "Higg Index"
+    }
+  };
+  Object.keys(intimates).forEach(function (l) {
+    Object.keys(intimates[l]).forEach(function (k) { translations[l][k] = intimates[l][k]; });
+  });
+
   /* ────────────────────────────────────────────
      ENGINE
      ──────────────────────────────────────────── */
@@ -893,16 +1005,18 @@
     // Text nodes
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
-      if (translations[lang][key] !== undefined) {
-        el.textContent = translations[lang][key];
+      var val = translations[lang][key] !== undefined ? translations[lang][key] : translations.en[key];
+      if (val !== undefined) {
+        el.textContent = val;
       }
     });
 
     // HTML nodes (for elements containing sup, br, etc.)
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-html');
-      if (translations[lang][key] !== undefined) {
-        el.innerHTML = translations[lang][key];
+      var val = translations[lang][key] !== undefined ? translations[lang][key] : translations.en[key];
+      if (val !== undefined) {
+        el.innerHTML = val;
       }
     });
 
